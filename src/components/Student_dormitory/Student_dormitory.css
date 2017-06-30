@@ -1,0 +1,258 @@
+a,a:hover,a:active,a:visited{
+    color:#000;
+    text-decoration: none;
+}
+#sdhead .wrap{
+    width: 980px;
+    height: 160px;
+    background: url('../../../src/images/sky.png');
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.wrap span:nth-of-type(1){
+    height:160px;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+.wrap img{
+    height:120px;
+}
+.wrap span:nth-of-type(2){
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    margin-right: 81px;
+    margin-bottom: 42px;
+    position: relative;
+}
+
+.container{
+    width:980px;
+    height:auto;
+    margin:20px auto;
+    padding:0;
+}
+#sdTop{
+    position: relative;
+}
+.container>.clearfix{
+    overflow: hidden;
+    _zoom:1;
+}
+#sdTop .left{
+    width:320px;
+    float: left;
+}
+#sdTop .login{
+    width:320px;
+    border:1px solid lightgray;
+    background:white;
+    padding-bottom: 24px;
+}
+.left .login{
+    height:100%;
+}
+.left .search{
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left .searchImg{
+    display: flex;
+    align-items: center;
+}
+.left .searchImg img{
+    height:18px;
+}
+.left .search>input{
+    text-align: center;
+    width:176px;
+    height:28px;
+    box-sizing: border-box;
+    outline:none;
+}
+.left .search>em{
+    font-size: 15px;
+    font-style: normal;
+}
+.left .search>span{
+    margin-left: 14px;
+    cursor: pointer;
+}
+.left .Link{
+    margin-top: 50px;
+}
+.Link p{
+    text-align: left;
+    margin-bottom: 24px;
+}
+.Link p:nth-last-of-type(1){
+    text-align: center;
+}
+.left .Link img{
+    width:130px;
+    margin-top: 10px;
+}
+.left .Link span{
+    display: inline-block;
+    margin:10px auto;
+}
+.left .Link em:nth-of-type(1){
+    text-align: left;
+    line-height:32px;
+    font-size: 15px;
+    font-style: normal;
+    margin-top: 20px;
+}
+.left .Link em{
+    font-size: 15px;
+    display: block;
+    font-style: normal;
+}
+#sdTop h4{
+    font-size: 15px;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    padding: 16px 0;
+    font-weight: bold;
+    margin-top: 0;
+}
+#sdTop .login p{
+    text-align: center;
+    font-size: 15px;
+    line-height: 24px;
+    margin: 16px 0;
+}
+#sdTop .login input{
+    width:196px;
+    height:30px;
+    box-sizing: border-box;
+    text-indent: 2em;
+    outline: none;
+}
+.login form{
+    text-align: center;
+}
+.login a{
+    display: block;
+    margin-top: -6px;
+    text-align: right;
+
+}
+.login a>span{
+    font-size: 14px;
+    margin-right: 32px;
+    color: #48D1CC;
+}
+#sdTop input[type = button]{
+    width:160px;
+    height:32px;
+    font-size: 16px;
+    text-indent: 0;
+    background:#21c6cd;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    margin-top: 10px;
+
+}
+#sdTop .right{
+    width:620px;
+    min-height: 900px;
+    float: right;
+}
+#sdTop .nav{
+    padding-left:0;
+    display: flex;
+    justify-content: space-around;
+    background:skyblue;
+}
+#sdTop .nav>.active{
+    background:white;
+    border-radius:10px 10px 0 0;
+    color: black;
+}
+#sdTop .nav li{
+    list-style: none;
+    height:35px;
+    line-height:35px;
+    padding:0 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+#sdTop .nav li:hover{
+    background:white;
+    border-radius:10px 10px 0 0;
+}
+#sdTop .right>.pics{
+    width:100%;
+    height:205px;
+    position:relative;
+    border:none;
+    padding:10px 10px 10px 10px;
+}
+#sdTop .pics img{
+    height:100%;
+}
+.sdTongzhi{
+    margin-top: 32px;
+
+}
+.sdTongzhi>.sdhead{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid skyblue;
+    line-height:32px;
+}
+.sdTongzhi>.sdhead span:nth-of-type(1){
+    font-weight: bold;
+}
+.sdTongzhi>.sdhead span:nth-of-type(2){
+    margin-right: 20px;
+    font-style: italic;
+    cursor: pointer;
+}
+.sdTongzhi>.neirong{
+    padding-left: 0;
+    padding-right: 0;
+}
+.glyphicon{
+    line-height:32px;
+}
+.shortIntroduce{
+    margin-top: 20px;
+}
+.shortIntroduce>.introHead{
+    line-height:32px;
+    border-bottom: 2px solid skyblue;
+    font-weight: bold;
+}
+.shortIntroduce>.introMain{
+    padding:20px 0;
+}
+.shortIntroduce>.introMain>p{
+    text-indent:2em;
+    line-height:25px;
+    font-size: 15px;
+}
+.introMain span{
+    display: block;
+    margin-top: 10px;
+}
+.introMain .image{
+    text-indent: 0;
+}
+.introMain .image>img{
+    width:200px;
+    height:150px;
+    margin:20px;
+}
+.shortIntroduce .image{
+    float: left;
+}

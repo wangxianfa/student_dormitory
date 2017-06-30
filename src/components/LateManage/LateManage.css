@@ -1,0 +1,69 @@
+.LateManage>.smdiv{
+    height:auto;
+}
+.LateManage .checkForm p{
+    text-align: center;
+    margin-top: 32px;
+}
+.LateManage .checkForm p>span{
+    display: block;
+    margin: 24px 0;
+}
+.LateManage .checkForm textarea{
+    min-width: 320px;
+    max-width: 320px;
+    min-height: 72px;
+    max-height: 90px;
+    margin-left: 1em;
+}
+.LateManage .checkForm span>input{
+    width: 260px;
+    height: 30px;
+    box-sizing: border-box;
+    margin-left: 1em;
+}
+.save{
+    width:64px;
+    height:32px;
+    background: green;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    //border-radius:5px;
+    border:none;
+    cursor: pointer;
+    margin-right: 1em;
+}
+.save>em{
+    font-size: 15px;
+}
+.save>span{
+    display: inline-block;
+    width:16px;
+    height:16px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-right: 6px;
+}
+
+.doBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.doBtn>a>button{
+    width:120px;
+    height:32px;
+    border:none;
+    background:blue;
+    //border-radius:5px;
+    font-size: 15px;
+    color:white;
+    box-sizing: border-box;
+    margin-left: 1em;
+    cursor:pointer;
+    line-height: 32px;
+}

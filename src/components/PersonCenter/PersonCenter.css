@@ -1,0 +1,267 @@
+#personCenter{
+    width: 100%;
+    height: 100%;
+    background: url('../../../src/images/personbg.png');
+    background-size: cover;
+    margin: 0 auto;
+    position: relative;
+}
+.clearfix{
+    overflow: hidden;
+    _zoom:1%;
+}
+#personHead{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+}
+.topbar{
+    width: 980px;
+    height: 64px;
+    margin: 0 auto;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.topLeft{
+    height: 100%;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.topLeft ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+    margin-left: 2em;
+}
+.active{
+    background: #40E0D0;
+    color: white;
+}
+.topLeft ul>li{
+    list-style: none;
+    float: left;
+    margin-right: 1em;
+    font-size: 16px;
+    height: 100%;
+    line-height: 64px;
+    padding: 0 1em;
+    cursor: pointer;
+}
+.topLeft ul>li:hover{
+    background: #40E0D0;
+    color: white;
+}
+.topLeft>span>img{
+    height: 45px;
+    margin-left: 24px;
+}
+
+.topRight{
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.fucList>span{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.fucList>span>img{
+    height: 36px;
+}
+.fucList>span>b{
+    width: 16px;
+    height: 16px;
+    color: white;
+    background: #00BFFF;
+    position: absolute;
+    right: 0px;
+    top: -5px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 13px;
+}
+.userList{
+    margin-left: 2em;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.userList>span{
+    display: inline-block;
+}
+.userList>span:nth-of-type(1) img{
+    height: 45px;
+}
+.set>img{
+    height: 32px;
+    cursor: pointer;
+}
+.userList>span{
+    margin: 0 6px;
+}
+
+#main{
+    width: 980px;
+    margin: 3em auto;
+}
+.maintop{
+    height: 36px;
+    background: #EAEAEA;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 1em;
+}
+.maintop>div{
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 16px;
+}
+.maintop>div:nth-of-type(2){
+    font-size: 15px;
+    color: gray;
+}
+.maintop span{
+    display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.maintop img{
+    height: 24px;
+    margin-right: 10px;
+}
+
+.maincontent{
+    width: 100%;
+    border: 1px solid lightgray;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 2em 1.5em 3em;
+    box-sizing: border-box;
+}
+.mainleft{
+    width: 240px;
+    border: 2px solid green;
+    padding: 16px 16px 3em;
+    box-sizing: border-box;
+    background: #FFFAFA;
+    float: left;
+}
+.mainleft>span>img{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px lightgray;
+}
+.mainleft>span{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+.mainright{
+    width: 640px;
+    height: 600px;
+    border: 1px solid red;
+    float: right;
+}
+.basemsg{
+    margin-top: 1.5em;
+}
+.basemsg>span{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    line-height: 32px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px lightgray;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+.basemsg>span:hover{
+    background: skyblue;
+    color: white;
+}
+.basemsg>span img{
+    height: 24px;
+    margin: 0 10px;
+}
+
+
+#personCenter>footer{
+    margin-top: 20px;
+    padding:50px 0 30px;
+    box-sizing: border-box;
+    background:linear-gradient(white,rgba(255,255,255,0.5));
+}
+.copyrighy{
+    width:980px;
+    margin:0 auto;
+    text-align: center;
+}
+.copyrighy h4{
+    line-height:32px;
+    margin:0;
+}
+.copyrighy h4 em{
+    margin:0 10px;
+}
+.copyrighy p{
+    line-height:32px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.copyrighy em{
+    margin:0 10px;
+}

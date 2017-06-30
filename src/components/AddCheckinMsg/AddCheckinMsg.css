@@ -1,0 +1,7 @@
+.message_wrap p>select{
+    width: 220px;
+    height: 32px;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+}

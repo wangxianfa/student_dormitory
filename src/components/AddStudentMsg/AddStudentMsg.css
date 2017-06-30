@@ -1,0 +1,52 @@
+.smdiv>form>span{
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}
+.smdiv>form>span button{
+    width: 120px;
+    height: 32px;
+    font-size: 15px;
+    margin: 0 6px;
+    background: green;
+    border: none;
+    outline: none;
+    color:#fff;
+    cursor: pointer;
+}
+.smdiv>form>span button:nth-of-type(2){
+    background: blue;
+}
+.message_wrap p{
+    text-align: center;
+    height: 32px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.message_wrap p>span{
+    display: inline-block;
+    // width: 200px;
+    height: 32px;
+    text-align: right;
+    margin-right: 12px;
+    //font-weight: bold;
+}
+
+.message_wrap p>input{
+    width: 220px;
+    height: 32px;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+}
+.sex>span:nth-of-type(2){
+    display: inline-block;
+    width: 220px;
+    height: 32px;
+    text-align: center;
+    margin-right: 0;
+}
+.sex>span:nth-of-type(2)>input{
+    width: 16px;
+    height: 16px;
+}
