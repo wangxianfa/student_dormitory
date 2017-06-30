@@ -1,0 +1,176 @@
+.clearfix{
+    overflow: hidden;
+    _zoom:1;
+}
+input,textArea,select{
+    outline: none;
+}
+#sdhead em{
+    display:inline-block;
+    position: absolute;
+    top: 46px;
+    right: -52px;
+    font-size: 18px;
+    font-weight: normal;
+}
+.DormRepair>#sdhead>.wrap span:nth-of-type(2){
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    margin-right: 81px;
+    margin-bottom: 42px;
+    position: relative;
+}
+#repairMain{
+    width:980px;
+    margin:0 auto;
+    margin-top: 50px;
+}
+.repTopbar{
+    height:32px;
+    background: linear-gradient(skyblue,white,skyblue);
+}
+.repTopbar img{
+    height: 32px;
+    margin-right: 10px;
+}
+.repTopbar span{
+    display: flex;
+    align-items: center;
+}
+.repairForm{
+    width:100%;
+    height:520px;
+    border: 1px skyblue solid;
+    box-sizing: border-box;
+    position: relative;
+}
+.repairForm h3{
+    padding-left: 42px;
+}
+.formleft{
+    width:50%;
+    box-sizing: border-box;
+    float: left;
+}
+.formleft p{
+    width:80%;
+    height:32px;
+    display: flex;
+    justify-content: space-between;
+    margin:16px auto;
+}
+.formleft p input,.formleft p select{
+    width:240px;
+    box-sizing: border-box;
+}
+.formleft p>span{
+    margin-right: 50px;
+}
+.formright{
+    width:50%;
+    box-sizing: border-box;
+    float: right;
+}
+.formright p:nth-of-type(1){
+    margin-top: 0;
+}
+.formright p:nth-of-type(1)>span{
+    display: block;
+    line-height: 36px;
+}
+.formright p:nth-of-type(1)>textArea{
+    min-width: 90%;
+    max-width: 90%;
+    height:120px;
+    overflow-y: auto;
+}
+.formright p:nth-of-type(2) select{
+    width:240px;
+    height:32px;
+    margin-bottom: 10px;
+}
+.formright p:nth-of-type(2)>span:nth-of-type(2){
+    display: block;
+    margin-bottom: 20px;
+}
+.formright p:nth-of-type(2)>span:nth-of-type(2) label{
+    display: inline-flex;
+    align-items: center;
+    width:50%;
+    text-align: center;
+    line-height:36px;
+}
+.formright p:nth-of-type(2) label input{
+    width:16px;
+    height:16px;
+    margin-right: 6px;
+}
+.formright p:nth-of-type(2)>span:nth-of-type(3) em{
+    margin-right: 10px;
+}
+.formright p:nth-of-type(2)>span:nth-of-type(3) input{
+    height:32px;
+    width:320px;
+    box-sizing: border-box;
+}
+.repairdetail>p:nth-last-of-type(1){
+    width:100%;
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+}
+.repairdetail>p:nth-last-of-type(1) button{
+    width:64px;
+    height:28px;
+    background:green;
+    color: white;
+    border:none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.repairdetail>p:nth-last-of-type(1) input{
+    width:64px;
+    height:28px;
+    background:blue;
+    color: white;
+    border:none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.repairs{
+    border:1px solid skyblue;
+    margin-top: 32px;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 500px;
+    overflow-y: hidden;
+    margin-bottom: 50px;
+    box-shadow: 0 0 20px lightgray;
+    border-radius: 5px;
+}
+.repairs h3{
+    text-align: center;
+    border-bottom: 1px dotted lightgray;
+    padding: 0 0 24px;
+}
+.repairContent{
+    color:green;
+    font-weight: bold;
+}
+.repairContent span{
+    color: #000;
+    font-weight: normal;
+}
+.repairContent li{
+    padding:14px 10px;
+    border-bottom: 1px dashed lightgray;
+    border-top: 1px dashed lightgray;
+    margin-bottom: 20px;
+}
+.repairContent li:nth-child(odd){
+    background: #E0FFFF;
+}
+.repairContent li:nth-child(even){
+    background: #F8F8FF;
+}

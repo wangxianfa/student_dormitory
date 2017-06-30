@@ -1,0 +1,62 @@
+#inOut{
+    width: 980px;
+    min-height: 600px;
+    margin: 42px auto 24px;
+    border: 1px solid lightskyblue;
+    box-sizing: border-box;
+    padding-bottom: 2em;
+}
+
+.admitForm p{
+    line-height: 32px;
+    text-align: center;
+    margin:1.2em 0;
+}
+.admitForm p:nth-of-type(1){
+    margin-top: 4em;
+}
+.admitForm p:nth-last-of-type(1){
+    margin-top: 2em;
+}
+.admitForm p span{
+    display: inline-block;
+    width:6em;
+    text-align: right;
+    margin-right: 1em;
+}
+.admitForm p input[type=radio]{
+    margin-left: 2em;
+}
+.admitForm p em{
+    text-align: left;
+}
+.admitForm p input[type=text],.admitForm p select,.admitForm p em{
+    display: inline-block;
+    width:260px;
+    height: 32px;
+    box-sizing: border-box;
+}
+.admitForm p textarea{
+    min-width: 320px;
+    max-width: 320px;
+    min-height:5em;
+    text-indent: 2em;
+}
+.admitForm p input[type=button]{
+    width:120px;
+    height:34px;
+    box-sizing: border-box;
+    background: green;
+    border:none;
+    //border-radius: 10px;
+    margin: 0 1em;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+.admitForm p>a>input[type=button]{
+    width:120px;
+    height:34px;
+    display: inline-block;
+    background: blue;
+}

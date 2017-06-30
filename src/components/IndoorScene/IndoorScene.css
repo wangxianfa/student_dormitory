@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+}
+.indoorDetail{
+    padding:0 0 1.2em;
+}
+.indoorDetail>span{
+    display: inline-block;
+    width:50%;
+    padding: 2em;
+    box-sizing: border-box;
+}
+.indoorDetail>span>em{
+    display: block;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.indoorDetail img{
+    width: 100%;
+}
+
+.evaluate h3{
+    border-bottom: none;
+    text-align: left;
+    text-indent: 2em;
+}
+.evaluate ol{
+    margin-top: 0;
+}
+.evaluate li{
+    line-height: 30px;
+    font-size: 15px;
+    list-style-type: decimal;
+}

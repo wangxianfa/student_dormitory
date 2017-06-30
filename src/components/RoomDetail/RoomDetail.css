@@ -1,0 +1,33 @@
+.roomdetail{
+    text-align: center;
+}
+.roomdetail p{
+    height: 32px;
+    line-height: 24px;
+    text-align: left;
+}
+.roomdetail p:nth-of-type(1){
+    margin-top: 3em;
+}
+.roomdetail p>span{
+    display: inline-block;
+    margin-right: 1em;
+    font-size: 15px;
+    font-weight: bold;
+}
+.roomdetail>span{
+    display: inline-block;
+    margin: 20px;
+}
+.roomdetail>span img{
+    width: 600px;
+}
+.roomdetail>span>em{
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    line-height:24px;
+}
+.roomdetail>span:nth-last-of-type(1){
+    margin-bottom: 3em;
+}
