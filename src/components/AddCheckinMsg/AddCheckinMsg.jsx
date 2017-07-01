@@ -5,9 +5,10 @@ class AddCheckinMsg extends React.Component {
 
     render() {
         return (
-            <div className="AddCheckinMsg">
+
+            <div className="smContent">
                 <div className="smdiv">
-                    <h3>入住信息添加</h3>
+                    <h3>学生入住信息添加</h3>
                     <form action="POST">
                         <div className="message_wrap">
                             <p>

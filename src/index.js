@@ -35,6 +35,12 @@ import StudentMsgSearch from './components/StudentMsgSearch/StudentMsgSearch';
 import LateRegistration from './components/LateRegistration/LateRegistration';
 import ElectricityPayment from './components/ElectricityPayment/ElectricityPayment';
 
+
+//通知公告
+import Announcement from './components/Announcement/Announcement';
+import SchoolNews from './components/SchoolNews/SchoolNews';
+import NewsDetail from './components/NewsDetail/NewsDetail';
+
 //个人中心
 import PersonCenter from './components/PersonCenter/PersonCenter';
 
@@ -103,6 +109,10 @@ ReactDOM.render((
         </Route>
         <Route path='login' component={Login} />
         <Route path='personcenter' component={PersonCenter} onEnter={requireCredentials}/>
-
+        <Route path='announcement' component={Announcement} >
+            <IndexRoute component={SchoolNews} />
+            <Route path="schoolNews" component={SchoolNews} />
+            <Route path="newsDetail" component={NewsDetail} />
+        </Route>
     </Router>
 ), document.getElementById('root'));

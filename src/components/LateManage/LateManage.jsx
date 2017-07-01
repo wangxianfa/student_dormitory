@@ -6,7 +6,7 @@ import { Link } from "react-router";
 class LateManage extends React.Component {
     render() {
         return (
-            <div className="LateManage">
+            <div className="smContent">
                 <div className="smdiv">
                     <h3>学生晚归登记</h3>
                     <div className="checkForm">

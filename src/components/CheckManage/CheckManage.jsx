@@ -8,7 +8,8 @@ import { Link } from "react-router";
 class CheckManage extends React.Component {
     render() {
         return (
-            <div className="CheckManage">
+
+            <div className="smContent">
                 <div className="smdiv">
                     <h3>学生入住查询</h3>
                     <div className="sdsearch">
