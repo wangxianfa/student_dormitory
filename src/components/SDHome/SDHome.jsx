@@ -1,24 +1,58 @@
 import React from 'react';
 import './SDHome.css';
 import sdImage from '../../../src/images/sdImage.png';
-
-
+import { Link } from 'react-router';
 
 class SDHome extends React.Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            "schoolnews" : [
+                {
+                    "snid" : "1",
+                    "ntitle" : "关于2015届春季毕业生离校和办理延期延派住宿手续的通知",
+                    "datetime" : "2015-01-06 17:54:17"
+                },
+                {
+                    "snid" : "2",
+                    "ntitle" : "关于2015届春季毕业生离校和办理延期延派住宿手续的通知",
+                    "datetime" : "2015-01-06 17:54:17"
+                }
+            ]
+        }   
+    }
+
     render() {
+
+        const { schoolnews } = this.state;
+        const schoolnewsList = schoolnews.map((elem,index)=>{
+            return (
+                <li key={index}>
+                    <Link to={{
+                        "pathname" : "/announcement/newsDetail",
+                        "query" : {"newid" : elem.snid}
+                    }}>
+                        <span className="glyphicon glyphicon-triangle-right">{elem.ntitle}</span>
+                    </Link>
+                    <time>{elem.datetime}</time>
+                </li>
+            )
+        });
+
         return (
             <div className="SDHome">
                 <div className="sdTongzhi">
                     <div className="sdhead">
                         <span>&gt; 通知公告</span>
-                        <span>更多 &gt;&gt;</span>
+                        <Link to={{
+                            "pathname" : "/announcement/schoolNews",
+                            "query" : {"selected" : 3}
+                        }}>
+                            <span>更多 &gt;&gt;</span>
+                        </Link>
                     </div>
-                    <div className="neirong">
-                        <li><a href="#"><span className="glyphicon glyphicon-triangle-right">&nbsp;关于2015届春季毕业生离校和办理延期延派住宿手续的通知</span></a><time>2015-01-06 17:54:17</time>
-                        </li>
-                        <li><a href="#"><span className="glyphicon glyphicon-triangle-right">&nbsp;关于2015届春季毕业生离校和办理延期延派住宿手续的通知</span></a><time>2015-01-06 17:54:17</time>
-                        </li>
-                    </div>
+                    <div className="neirong">{schoolnewsList}</div>
                 </div>
                 <div className="shortIntroduce">
                     <div className="introHead">

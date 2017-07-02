@@ -36,9 +36,7 @@ class StudentMsg extends React.Component {
                             </Link>
                         </ul>
                     </nav>
-                    <div className="smContent">
-                        {this.props.children}
-                    </div>
+                    {this.props.children}
                 </div>
                 <footer>
                     <div className="copyrighy">

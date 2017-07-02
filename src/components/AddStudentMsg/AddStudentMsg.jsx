@@ -5,7 +5,7 @@ class AddStudentMsg extends React.Component {
 
     render() {
         return (
-            <div className="AddStudentMsg">
+            <div className="smContent">
                 <div className="smdiv">
                     <h3>学生信息添加</h3>
                     <form action="POST">

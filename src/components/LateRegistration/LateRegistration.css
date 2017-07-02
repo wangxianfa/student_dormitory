@@ -4,7 +4,7 @@
     min-height: 600px
 }
 .lateRg h3{
-    margin: 1em 0 0;
+    margin: 26px 0 0;
     padding: 1em 0 1.5em;
     text-align: center;
     border-bottom: 1px dashed lightgray;
@@ -55,6 +55,9 @@
 .lateRg tr>td{
     border: 1px solid lightgray;
     margin: 0;
+}
+.lateRg tr>td a{
+    color: green;
 }
 .lateRg tbody tr:nth-child(odd){
     background:#E0FFFF;

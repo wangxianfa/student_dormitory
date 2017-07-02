@@ -35,6 +35,22 @@ import StudentMsgSearch from './components/StudentMsgSearch/StudentMsgSearch';
 import LateRegistration from './components/LateRegistration/LateRegistration';
 import ElectricityPayment from './components/ElectricityPayment/ElectricityPayment';
 
+import StudentsFilter from './components/StudentsFilter/StudentsFilter';
+import StudentDormMsg from './components/StudentDormMsg/StudentDormMsg';
+import PersonalMsg from './components/PersonalMsg/PersonalMsg';
+
+
+//通知公告
+import Announcement from './components/Announcement/Announcement';
+import SchoolNews from './components/SchoolNews/SchoolNews';
+import NewsDetail from './components/NewsDetail/NewsDetail';
+
+
+//外来人员来访
+import OutsidersVisit from './components/OutsidersVisit/OutsidersVisit';
+import OutsidersRg from './components/OutsidersRg/OutsidersRg';
+import OutsidersRecords from './components/OutsidersRecords/OutsidersRecords';
+
 //个人中心
 import PersonCenter from './components/PersonCenter/PersonCenter';
 
@@ -89,7 +105,10 @@ ReactDOM.render((
             <Route path="addstuMsg" component={AddStudentMsg} />
             <Route path="addcheckinMsg" component={AddCheckinMsg} />
             <Route path="lateRg" component={LateRegistration} />
+            <Route path="stusFilter" component={StudentsFilter} />
+            <Route path="StuDormMsg" component={StudentDormMsg} />
         </Route>
+        <Route path='personalMsg' component={PersonalMsg} />
         <Route path='dormRepair' component={DormRepair} />
         <Route path='health' component={HealthManage} >
             <IndexRoute component={HealthInspect} />
@@ -103,6 +122,15 @@ ReactDOM.render((
         </Route>
         <Route path='login' component={Login} />
         <Route path='personcenter' component={PersonCenter} onEnter={requireCredentials}/>
-
+        <Route path='announcement' component={Announcement} >
+            <IndexRoute component={SchoolNews} />
+            <Route path="schoolNews" component={SchoolNews} />
+            <Route path="newsDetail" component={NewsDetail} />
+        </Route>
+        <Route path="outsiders" component={OutsidersVisit}>
+            <IndexRoute component={OutsidersRg} />
+            <Route path="outsidersRg" component={OutsidersRg} />
+            <Route path="outsidersRecords" component={OutsidersRecords} />
+        </Route>
     </Router>
 ), document.getElementById('root'));

@@ -28,7 +28,7 @@ class BuildingMsg extends React.Component {
 
         const buildingMsgList = buildingMsg.map((elem,index)=>{
             return (
-                <tr key={elem.uid}>
+                <tr key={elem.bid}>
                     <td>{elem.bid}</td>
                     <td>{elem.sex}</td>
                     <td><Link to={{

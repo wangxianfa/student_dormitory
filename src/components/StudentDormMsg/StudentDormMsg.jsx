@@ -1,48 +1,45 @@
 import React from 'react';
-import './LateRegistration.css';
+import './StudentDormMsg.css';
 import search from '../../../src/images/search.png';
+import { Link } from 'react-router';
 
-export default class LateRegistration extends React.Component {
+export default class StudentDormMsg extends React.Component {
 
 	constructor(props){
 		super(props);
 		this.state = {
-			"lateRegistration" : [
+			"studentDormMsg" : [
 				{
 					"sid" : 1,
 					"sno" : "201421092075",
 					"name" : "王先发",
+					"grade" : "2014级",
 					"major" : "软件工程",
-					"dorm" : "22栋",
-					"remarks" : "这是备注这是备注这是备注",
-					"datetime" : "2017-4-1 17:23:45"
+					"dorm" : "22栋"
 				},
 				{
 					"sid" : 2,
 					"sno" : "201421092075",
 					"name" : "王先发",
+					"grade" : "2014级",
 					"major" : "软件工程",
-					"dorm" : "22栋",
-					"remarks" : "这是备注这是备注这是备注",
-					"datetime" : "2017-4-1 17:23:45"
+					"dorm" : "22栋"
 				},
 				{
 					"sid" : 3,
 					"sno" : "201421092075",
 					"name" : "王先发",
+					"grade" : "2014级",
 					"major" : "软件工程",
-					"dorm" : "22栋",
-					"remarks" : "这是备注这是备注这是备注",
-					"datetime" : "2017-4-1 17:23:45"
+					"dorm" : "22栋"
 				},
 				{
 					"sid" : 4,
 					"sno" : "201421092075",
 					"name" : "王先发",
+					"grade" : "2014级",
 					"major" : "软件工程",
-					"dorm" : "22栋",
-					"remarks" : "这是备注这是备注这是备注",
-					"datetime" : "2017-4-1 17:23:45"
+					"dorm" : "22栋"
 				}
 			]
 		}
@@ -50,29 +47,35 @@ export default class LateRegistration extends React.Component {
 
   render() {
 
-	const { lateRegistration } = this.state;
-	const lateRegistrationList = lateRegistration.map((elem,index) =>{
+	const { studentDormMsg } = this.state;
+	const studentDormMsgList = studentDormMsg.map((elem,index) =>{
 		return (
             <tr key={index}>
                 <td>{elem.sno}</td>
                 <td>{elem.name}</td>
+                <td>{elem.grade}</td>
                 <td>{elem.major}</td>
                 <td>{elem.dorm}</td>
-                <td>{elem.remarks}</td>
-                <td>{elem.datetime}</td>
+                <td>
+	                <Link to={{
+	                	"pathname" : "",
+	                	"query" : {}
+	                }}>查看
+	                </Link>
+                </td>
             </tr>
 		)
 	})
 
     return (
-        <div className="smContent">
+		<div className="smContent">
 			<div className="lateRg">
-				<h3>晚归情况登记详情</h3>
+				<h3>学生入住信息</h3>
 			    <div className="InoutFilter">
 			        <p>
 			            <span>显示排序：</span>
 			            <select>
-			                <option value="time">------按时间------</option>
+			                <option value="time">------按年级------</option>
 			                <option value="no">------按学号------</option>
 			            </select>
 			        </p>
@@ -94,13 +97,13 @@ export default class LateRegistration extends React.Component {
 			            <tr>
 			                <td>学号</td>
 			                <td>姓名</td>
+			                <td>年级</td>
 			                <td>专业</td>
 			                <td>楼栋</td>
-			                <td>晚归说明</td>
-			                <td>时间</td>
+			                <td>操作</td>
 			            </tr>
 			        </thead>
-			        <tbody>{lateRegistrationList}</tbody>
+			        <tbody>{studentDormMsgList}</tbody>
 			    </table>
 			    <ul className="page">
 			        <li>前一页</li>

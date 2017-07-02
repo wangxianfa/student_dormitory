@@ -1,0 +1,51 @@
+#outsidersRg{
+	margin: 24px auto;
+}
+.outsidersRg>h3{
+	text-align: center;
+	border-bottom: 1px dashed #333;
+	padding: 1.5em 0 1em;
+	width: 90%;
+	margin: 1.5em auto 2em;
+}
+.outsidersRg>p{
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+}
+.outsidersRg>p>span{
+	width: 100px;
+	display: inline-block;
+	line-height: 32px;
+	font-size: 15px;
+	text-align: right;
+}
+.outsidersRg>p>input,.outsidersRg>p>select{
+	width: 280px;
+	height: 32px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.outsidersRg>p>input{
+	text-indent: 4px;
+}
+
+.outsidersRg>p:nth-last-of-type(1){
+	margin-top: 2em;
+}
+
+.outsidersRg>p button{
+	height: 32px;
+	font-size: 14px;
+	color: #fff;
+	background-color: green;
+	border: none;
+	margin: 0 10px;
+	min-width: 64px;
+	cursor: pointer;
+}
+.outsidersRg>p a>button{
+	background-color: blue;
+	width: 120px;
+}

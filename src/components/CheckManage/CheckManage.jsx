@@ -8,16 +8,22 @@ import { Link } from "react-router";
 class CheckManage extends React.Component {
     render() {
         return (
-            <div className="CheckManage">
+
+            <div className="smContent">
                 <div className="smdiv">
                     <h3>学生入住查询</h3>
                     <div className="sdsearch">
                         <p>
                             <span>按学号查找：<input type="text"></input></span>
-                            <span className="btn">
-                                <span><img src={search} alt="搜索" /></span>
-                                <em>查询</em>
-                            </span>
+                            <Link to={{
+                                "pathname" : "/studentMsg/StuDormMsg",
+                                "query" : {}
+                            }}>
+                                <span className="btn">
+                                    <span><img src={search} alt="搜索" /></span>
+                                    <em>查询</em>
+                                </span>
+                            </Link>
                         </p>
                     </div>
                     <p>

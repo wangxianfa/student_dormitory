@@ -1,22 +1,22 @@
-.LateManage>.smdiv{
+.smdiv{
     height:auto;
 }
-.LateManage .checkForm p{
+.checkForm p{
     text-align: center;
     margin-top: 32px;
 }
-.LateManage .checkForm p>span{
+.checkForm p>span{
     display: block;
     margin: 24px 0;
 }
-.LateManage .checkForm textarea{
+.checkForm textarea{
     min-width: 320px;
     max-width: 320px;
     min-height: 72px;
     max-height: 90px;
     margin-left: 1em;
 }
-.LateManage .checkForm span>input{
+.checkForm span>input{
     width: 260px;
     height: 30px;
     box-sizing: border-box;

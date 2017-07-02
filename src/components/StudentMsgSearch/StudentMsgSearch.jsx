@@ -8,24 +8,31 @@ class StudentMsgSearch extends React.Component {
 
     render() {
         return (
-            <div className="CheckManage">
-                <div className="smdiv">
-                    <h3>学生信息查询</h3>
-                    <div className="sdsearch">
+            <div className="smContent">
+                <div className="CheckManage">
+                    <div className="smdiv">
+                        <h3>学生信息查询</h3>
+                        <div className="sdsearch">
+                            <p>
+                                <span>按学号查找：<input type="text"></input></span>
+                                <Link to={{
+                                    "pathname" : "/studentMsg/stusFilter",
+                                    "query" : {}
+                                }}>
+                                    <span className="btn">
+                                        <span><img src={search} alt="搜索" /></span>
+                                        <em>查询</em>
+                                    </span>
+                                </Link>
+                            </p>
+                        </div>
                         <p>
-                            <span>按学号查找：<input type="text"></input></span>
-                            <span className="btn">
-                                <span><img src={search} alt="搜索" /></span>
-                                <em>查询</em>
-                            </span>
+                            <Link to="/StudentMsg/addstuMsg">
+                                <span><img src={edit} alt="学生添加" /></span>
+                                <em>学生信息添加</em>
+                            </Link>
                         </p>
                     </div>
-                    <p>
-                        <Link to="/StudentMsg/addstuMsg">
-                            <span><img src={edit} alt="学生添加" /></span>
-                            <em>学生信息添加</em>
-                        </Link>
-                    </p>
                 </div>
             </div>
         );
