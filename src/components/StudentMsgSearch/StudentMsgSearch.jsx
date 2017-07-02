@@ -15,10 +15,15 @@ class StudentMsgSearch extends React.Component {
                         <div className="sdsearch">
                             <p>
                                 <span>按学号查找：<input type="text"></input></span>
-                                <span className="btn">
-                                    <span><img src={search} alt="搜索" /></span>
-                                    <em>查询</em>
-                                </span>
+                                <Link to={{
+                                    "pathname" : "/studentMsg/stusFilter",
+                                    "query" : {}
+                                }}>
+                                    <span className="btn">
+                                        <span><img src={search} alt="搜索" /></span>
+                                        <em>查询</em>
+                                    </span>
+                                </Link>
                             </p>
                         </div>
                         <p>

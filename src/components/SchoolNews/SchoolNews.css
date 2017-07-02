@@ -5,7 +5,7 @@
 	margin-top: 2em;
 	padding : 0 24px;
 }
-.health li{
+.health a>li{
 	height: 36px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -50,7 +50,7 @@
 	float: right;
 
 }
-.health li:hover{
+.health a>li:hover{
 	border-bottom: 1px dashed #000;
 	background-color: skyblue;
 	color: #fff;

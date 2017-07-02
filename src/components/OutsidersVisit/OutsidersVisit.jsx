@@ -1,22 +1,25 @@
 import React from 'react';
-import './Announcement.css';
-// import { Link } from "react-router";
+import './OutsidersVisit.css';
 import stuManage from '../../../src/images/stuMessage.png';
-// import notice from '../../../src/images/notice.png';
+import outsiders from '../../../src/images/outsiders.jpg';
 
-export default class Announcement extends React.Component {
+export default class OutsidersVisit extends React.Component {
 
   render() {
-
     return (
-      <div className="announcement">
-        	<div id="sdhead">
+      <div id="outsidersVisit">
+  		<div id="sdhead">
                 <div className="wrap">
                     <span><img src={stuManage} alt="学生宿舍管理log" /></span>
-                    <span>学生宿舍管理平台<em>----公告通知</em></span>
+                    <span>学生宿舍管理平台<em>----来访管理</em></span>
                 </div>
             </div>
-            {this.props.children}
+            <div className="health" id="outsidersRg">
+	            <div className="repTopbar">
+	                <span><img src={outsiders} alt="来访图标" /><em>外来人员来访登记</em></span>
+	            </div>
+            	{this.props.children}
+            </div>
             <footer>
                 <div className="copyrighy">
                     <h4>版权所有© 2016 中南民族大学<em></em>邮编 430074</h4>

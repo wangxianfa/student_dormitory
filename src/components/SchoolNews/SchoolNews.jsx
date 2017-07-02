@@ -1,7 +1,7 @@
 import React from 'react';
 import './SchoolNews.css';
 import { Link } from "react-router";
-import stuManage from '../../../src/images/stuMessage.png';
+// import stuManage from '../../../src/images/stuMessage.png';
 import notice from '../../../src/images/notice.png';
 
 export default class SchoolNews extends React.Component {
@@ -49,7 +49,7 @@ export default class SchoolNews extends React.Component {
 	setSelected(index){
 
 		this.setState({
-			"selected" : parseInt(index)
+			"selected" : parseInt(index,10)
 		},()=>{
 			//发送请求，获得数据
 			console.log(index);

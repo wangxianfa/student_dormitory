@@ -92,8 +92,8 @@ class Home extends React.Component {
                             <Link to="/inOut">
                                 <li>贵重物品出入 <span><img src={arowRight} alt="右箭头" /></span></li>
                             </Link>
-                            <Link to="#">
-                                <li>外来人员来访 <span><img src={arowRight} alt="右箭头" /></span></li>
+                            <Link to="/outsiders">
+                                <li>访客信息管理 <span><img src={arowRight} alt="右箭头" /></span></li>
                             </Link>
                             <Link to="/health">
                                 <li>宿舍卫生 <span><img src={arowRight} alt="右箭头" /></span></li>

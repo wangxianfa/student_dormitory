@@ -84,6 +84,7 @@ input,textArea,select{
     max-width: 90%;
     height:120px;
     overflow-y: auto;
+    resize: none;
 }
 .formright p:nth-of-type(2) select{
     width:240px;
