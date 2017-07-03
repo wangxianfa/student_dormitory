@@ -14,7 +14,16 @@ class CheckManage extends React.Component {
                     <h3>学生入住查询</h3>
                     <div className="sdsearch">
                         <p>
-                            <span>按学号查找：<input type="text"></input></span>
+                            <span>按专业：<select name="stuSearh">
+                                <option value="-1">不限</option>
+                                <option value="1">软件工程</option>
+                                <option value="2">电信专业</option>
+                            </select></span>
+                            <span>按年级：<select name="stuSearh">
+                                <option value="-1">不限</option>
+                                <option value="1">2014级</option>
+                                <option value="2">2015级</option>
+                            </select></span>
                             <Link to={{
                                 "pathname" : "/studentMsg/StuDormMsg",
                                 "query" : {}

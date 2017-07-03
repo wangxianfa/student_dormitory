@@ -119,7 +119,7 @@ em{
     background:LightCyan;
 }
 .searchResult table>tbody a{
-    color: orange;
+    color: green;
 }
 .searchResult table>tbody a:hover{
     text-decoration: underline;

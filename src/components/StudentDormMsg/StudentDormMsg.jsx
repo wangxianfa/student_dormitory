@@ -15,7 +15,8 @@ export default class StudentDormMsg extends React.Component {
 					"name" : "王先发",
 					"grade" : "2014级",
 					"major" : "软件工程",
-					"dorm" : "22栋"
+					"dorm" : "22栋",
+					"room" : "515"
 				},
 				{
 					"sid" : 2,
@@ -23,7 +24,8 @@ export default class StudentDormMsg extends React.Component {
 					"name" : "王先发",
 					"grade" : "2014级",
 					"major" : "软件工程",
-					"dorm" : "22栋"
+					"dorm" : "22栋",
+					"room" : "515"
 				},
 				{
 					"sid" : 3,
@@ -31,7 +33,8 @@ export default class StudentDormMsg extends React.Component {
 					"name" : "王先发",
 					"grade" : "2014级",
 					"major" : "软件工程",
-					"dorm" : "22栋"
+					"dorm" : "22栋",
+					"room" : "515"
 				},
 				{
 					"sid" : 4,
@@ -39,7 +42,8 @@ export default class StudentDormMsg extends React.Component {
 					"name" : "王先发",
 					"grade" : "2014级",
 					"major" : "软件工程",
-					"dorm" : "22栋"
+					"dorm" : "22栋",
+					"room" : "515"
 				}
 			]
 		}
@@ -56,13 +60,7 @@ export default class StudentDormMsg extends React.Component {
                 <td>{elem.grade}</td>
                 <td>{elem.major}</td>
                 <td>{elem.dorm}</td>
-                <td>
-	                <Link to={{
-	                	"pathname" : "",
-	                	"query" : {}
-	                }}>查看
-	                </Link>
-                </td>
+                <td>{elem.room}</td>
             </tr>
 		)
 	})
@@ -100,7 +98,7 @@ export default class StudentDormMsg extends React.Component {
 			                <td>年级</td>
 			                <td>专业</td>
 			                <td>楼栋</td>
-			                <td>操作</td>
+			                <td>宿舍</td>
 			            </tr>
 			        </thead>
 			        <tbody>{studentDormMsgList}</tbody>

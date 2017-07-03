@@ -11,9 +11,17 @@ class LateManage extends React.Component {
                     <h3>学生晚归登记</h3>
                     <div className="checkForm">
                         <p>
-                            <span>学生学号：<input type="text"></input></span>
-                            <span>学生姓名：<input type="text"></input></span>
-                            <span>晚归说明：<textarea></textarea></span>
+                            <span><em>学生学号：</em><input type="text"></input></span>
+                            <span><em>学生姓名：</em><input type="text"></input></span>
+                            <span><em>专业：</em><input type="text"></input></span>
+                            <span>
+                                <em>楼栋：</em>
+                                <select name="dorm">
+                                    <option value="1">1栋</option>
+                                    <option value="2">2栋</option>
+                                </select>
+                            </span>
+                            <span><em>晚归说明：</em><textarea></textarea></span>
                         </p>
                         <div className="doBtn">
                             <div className="save">

@@ -1,7 +1,8 @@
 import React from 'react';
 import './OutsidersVisit.css';
 import stuManage from '../../../src/images/stuMessage.png';
-import outsiders from '../../../src/images/outsiders.jpg';
+import notice from '../../../src/images/notice.png';
+// import outsiders from '../../../src/images/outsiders.jpg';
 
 export default class OutsidersVisit extends React.Component {
 
@@ -16,7 +17,7 @@ export default class OutsidersVisit extends React.Component {
             </div>
             <div className="health" id="outsidersRg">
 	            <div className="repTopbar">
-	                <span><img src={outsiders} alt="来访图标" /><em>外来人员来访登记</em></span>
+	                <span><img src={notice} alt="来访图标" /><em>外来人员来访登记</em></span>
 	            </div>
             	{this.props.children}
             </div>
