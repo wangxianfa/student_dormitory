@@ -9,6 +9,11 @@
     display: block;
     margin: 24px 0;
 }
+.checkForm p>span>em{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
 .checkForm textarea{
     min-width: 320px;
     max-width: 320px;
@@ -16,7 +21,7 @@
     max-height: 90px;
     margin-left: 1em;
 }
-.checkForm span>input{
+.checkForm span>input, .checkForm span>select{
     width: 260px;
     height: 30px;
     box-sizing: border-box;
