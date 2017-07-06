@@ -1,6 +1,6 @@
 import React from 'react';
 import './OutsidersRecords.css';
-import search from '../../../src/images/search.png';
+//import search from '../../../src/images/search.png';
 
 export default class OutsidersRecords extends React.Component {
 

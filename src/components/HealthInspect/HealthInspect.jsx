@@ -1,6 +1,7 @@
 import React from 'react';
 import './HealthInspect.css';
 import { Link } from "react-router";
+import ajax from '../../../server/ajax.js';
 
 
 class HealthInspect extends React.Component {
@@ -39,6 +40,19 @@ class HealthInspect extends React.Component {
                 }
             ]
         }
+    }
+
+    componentDidMount() {
+
+        console.log(ajax)
+
+        ajax({"url": 'http://localhost:3000/', "method" : "GET"})
+        .then((data) => {
+            console.log(data);
+        }, (err) => {
+            console.log(err);
+        })
+
     }
 
     render() {
