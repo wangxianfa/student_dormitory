@@ -5,12 +5,14 @@
  */
 exports.ajax = function ajax(config) {
 
-	var url = config.url,
-		method = config.method || 'GET',
-		async = config.async || true,
-		data = config.data || '';
+	var ajaxConfig = {
+		"url": config.url,
+		"method": config.method || 'GET',
+		"async": config.async || true,
+		"data": config.data || ''
+	}
 
-	console.log(url)
+	//console.log(ajaxConfig)
 
 	var xhr;
 
@@ -20,18 +22,18 @@ exports.ajax = function ajax(config) {
 		xhr = new ActiveXObject("Microsoft.XMLHTTP");
 	}
 
-	xhr.open(method, url, async);
+	xhr.open(ajaxConfig.method, ajaxConfig.url, ajaxConfig.async);
 
 
-	if (method === 'GET') {
+	if (ajaxConfig.method === 'GET') {
 
 		xhr.send();
 
 
-	} else if (method === 'POST') {
+	} else if (ajaxConfig.method === 'POST') {
 
 		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		xhr.send(data);
+		xhr.send(ajaxConfig.data);
 
 	}
 
@@ -40,14 +42,18 @@ exports.ajax = function ajax(config) {
 
 		xhr.onreadystatechange = function() {
 
-			if (xhr.readyState === 4 && xhr.status === 200) {
+			if (xhr.readyState === 4) {
 
-				var response = JSON.parse(xhr.responseText);
-				resolve(response);
+				if (xhr.status === 200) {
 
-			} else {
+					resolve(xhr.responseText);
 
-				reject(new Error(xhr.status))
+				} else {
+
+					reject(new Error(xhr.status));
+
+				}
+
 
 			}
 
@@ -55,3 +61,5 @@ exports.ajax = function ajax(config) {
 	});
 
 }
+
+//export default ajax;
