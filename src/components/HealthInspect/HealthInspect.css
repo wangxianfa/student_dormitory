@@ -1,6 +1,14 @@
-/* 
-* @Author: anchen
-* @Date:   2017-04-01 19:45:31
-* @Last Modified by:   anchen
-* @Last Modified time: 2017-04-01 19:45:31
-*/
+thead>tr>td:nth-of-type(4){
+	width: 320px;
+}
+
+tr>td:nth-of-type(4){
+	width: 320px;
+	max-width: 320px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

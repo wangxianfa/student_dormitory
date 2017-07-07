@@ -1,6 +1,7 @@
 import React from 'react';
 import './HealthInspect.css';
 import { Link } from "react-router";
+import { ajax } from '../../../server/ajax.js';
 
 
 class HealthInspect extends React.Component {
@@ -8,37 +9,27 @@ class HealthInspect extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            "healthdetail" : [
-                {
-                    "bid" : 22,
-                    "rid" : 515,
-                    "score" : 9.5,
-                    "remarks" : "这是备注这是备注这是备注",
-                    "datetime" : "2017-4-1 17:23:45"
-                },
-                {
-                    "bid" : 21,
-                    "rid" : 515,
-                    "score" : 9.5,
-                    "remarks" : "这是备注这是备注这是备注",
-                    "datetime" : "2017-4-1 17:23:45"
-                },
-                {
-                    "bid" : 20,
-                    "rid" : 515,
-                    "score" : 9.5,
-                    "remarks" : "这是备注这是备注这是备注",
-                    "datetime" : "2017-4-1 17:23:45"
-                },
-                {
-                    "bid" : 23,
-                    "rid" : 515,
-                    "score" : 9.5,
-                    "remarks" : "这是备注这是备注这是备注",
-                    "datetime" : "2017-4-1 17:23:45"
-                }
-            ]
+            "healthdetail" : []
         }
+    }
+
+    componentDidMount() {
+
+        ajax({"url": 'http://localhost:3000/health'})
+        .then((data) => {
+            //成功
+            const newData = JSON.parse(data).contents;
+            this.setState({
+                "healthdetail" : this.state.healthdetail.concat(newData)
+            })
+
+
+        }, (err) => {
+            //出错
+            console.log(err);
+
+        })
+
     }
 
     render() {
