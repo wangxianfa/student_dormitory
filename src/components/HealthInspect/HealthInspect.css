@@ -12,3 +12,7 @@ tr>td:nth-of-type(4){
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
+.healthdetail>.page{
+	margin: 3em 0;
+}

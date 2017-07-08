@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var router = require('./router/index.js');
+var db = require('./models/db.js');
 
 app.get('/health', router.showHealth);
 
