@@ -91,6 +91,27 @@ healthSchema.statics.countSum = function(dorm_filter, room_filter, callback) {
 
 }
 
+healthSchema.statics.findDorm = function(callback) {
+
+	return this.model('mongoose').find("").select("dorm").exec(callback);
+
+}
+
+
+healthSchema.statics.findRoom = function(dorm, callback) {
+
+	if (dorm === "all") {
+
+		return this.model('mongoose').find("").select("room").exec(callback);
+
+	}
+
+	return this.model('mongoose').find({
+		"dorm": dorm
+	}).select("room").exec(callback);
+
+}
+
 // model
 var healthModel = db.model('mongoose', healthSchema, "health");
 
