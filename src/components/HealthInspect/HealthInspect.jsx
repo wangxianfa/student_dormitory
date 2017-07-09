@@ -87,7 +87,7 @@ class HealthInspect extends React.Component {
         })
     }
     
-    //获取宿舍
+    //获取宿舍,每次楼栋选择之后都需要重新获取宿舍情况
     fetchRoom(){
         const dorm = this.state.dorm_filter;
         ajax({"url": `http://localhost:3000/health/fetchroom?dorm=${dorm}`})
