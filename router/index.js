@@ -9,6 +9,9 @@ exports.showHealth = (req, res) => {
 	const dorm_filter = req.query.dorm_filter;
 	const room_filter = req.query.room_filter;
 
+
+	res.header('Access-Control-Allow-Origin', "http://localhost:8088");
+
 	healthModel.findall(orderBy, dorm_filter, room_filter, page, pageSize, (err, data) => {
 
 		if (err) {
@@ -17,7 +20,6 @@ exports.showHealth = (req, res) => {
 			return;
 
 		}
-		res.header('Access-Control-Allow-Origin', "http://localhost:8088");
 		//console.log(data)
 		healthModel.countSum(dorm_filter, room_filter, (err, count) => {
 
@@ -37,6 +39,32 @@ exports.showHealth = (req, res) => {
 			res.send(newData)
 
 		})
+
+	})
+
+}
+
+exports.fetchDorm = (req, res) => {
+
+	res.header('Access-Control-Allow-Origin', "http://localhost:8088");
+
+	healthModel.findDorm((err, data) => {
+		console.log(data);
+		res.send(data);
+	})
+
+}
+
+exports.fetchRorm = (req, res) => {
+
+	const dorm = req.query.dorm;
+
+	res.header('Access-Control-Allow-Origin', "http://localhost:8088");
+
+	healthModel.findRoom(dorm, (err, data) => {
+
+		console.log(data);
+		res.send(data);
 
 	})
 

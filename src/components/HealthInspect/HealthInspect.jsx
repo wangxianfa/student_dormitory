@@ -9,6 +9,8 @@ class HealthInspect extends React.Component {
     constructor(props){
         super(props);
         this.state = {
+            "dorm" : [],
+            "room" : [],
             "healthdetail" : [],
             "currentPage" : 1,
             "pageSize" : 20,
@@ -21,11 +23,15 @@ class HealthInspect extends React.Component {
         this.fetchData = this.fetchData.bind(this);
         this.fetchPrevPage = this.fetchPrevPage.bind(this);
         this.fetchNextPage = this.fetchNextPage.bind(this);
+        this.fetchDorm = this.fetchDorm.bind(this);
+        this.fetchRoom = this.fetchRoom.bind(this);
     }
 
     componentDidMount() {
         
         this.fetchData();
+        this.fetchDorm();
+        this.fetchRoom();
 
     }
 
@@ -49,6 +55,55 @@ class HealthInspect extends React.Component {
                 "totalPage" : Math.ceil(count/this.state.pageSize)
             })
 
+
+        }, (err) => {
+            //出错
+            console.log(err);
+
+        })
+    }
+
+    //获取楼栋
+    fetchDorm(){
+        ajax({"url": `http://localhost:3000/health/fetchdorm`})
+        .then((result) => {
+            //成功
+            var data = JSON.parse(result);
+            var dorm = [];
+
+            for (var i = 0; i < data.length; i++) {
+                //console.log(data[i])
+                dorm.push(data[i].dorm);
+            }
+
+            this.setState({
+                "dorm" : Array.from(new Set(dorm))
+            })
+
+        }, (err) => {
+            //出错
+            console.log(err);
+
+        })
+    }
+    
+    //获取宿舍,每次楼栋选择之后都需要重新获取宿舍情况
+    fetchRoom(){
+        const dorm = this.state.dorm_filter;
+        ajax({"url": `http://localhost:3000/health/fetchroom?dorm=${dorm}`})
+        .then((result) => {
+            //成功
+            var data = JSON.parse(result);
+            var room = [];
+
+            for (var i = 0; i < data.length; i++) {
+                //console.log(data[i])
+                room.push(data[i].room);
+            }
+
+            this.setState({
+                "room" : Array.from(new Set(room))
+            })
 
         }, (err) => {
             //出错
@@ -95,7 +150,7 @@ class HealthInspect extends React.Component {
 
     render() {
 
-        const { healthdetail , pageSize, currentPage, totalPage} = this.state;
+        const { dorm, room, healthdetail , pageSize, currentPage, totalPage} = this.state;
 
         //console.log(healthdetail)
         const healthdetailList = healthdetail.map((elem, index) => {
@@ -112,6 +167,18 @@ class HealthInspect extends React.Component {
                     <td>{elem.date_time}</td>
                 </tr>
             );
+        })
+
+        const dormList = dorm.map((elem, index) => {
+            return(
+                <option key={index} value={elem}>------{elem}栋------</option>
+            )
+        })
+
+        const roomList = room.map((elem, index) => {
+            return(
+                <option key={index} value={elem}>------{elem}------</option>
+            )
         })
 
         return (
@@ -138,15 +205,11 @@ class HealthInspect extends React.Component {
                                 "dorm_filter" : e.target.value
                             }, () => {
                                 this.fetchData();
+                                this.fetchRoom();
                             })
                         }}>
                             <option value="all">------显示所有------</option>
-                            <option value="1">------1栋------</option>
-                            <option value="22">------22栋------</option>
-                            <option value="23">------23栋------</option>
-                            <option value="24">------24栋------</option>
-                            <option value="25">------25栋------</option>
-                            <option value="28">------28栋------</option>
+                            {dormList}
                         </select>
                     </p>
                     <p>
@@ -159,8 +222,7 @@ class HealthInspect extends React.Component {
                             })
                         }}>
                             <option value="all">------显示所有------</option>
-                            <option value="515">------515------</option>
-                            <option value="516">------516------</option>
+                            {roomList}
                         </select>
                     </p>
                 </div>
