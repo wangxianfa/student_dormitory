@@ -1,12 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/student_dormitory');
-
-var db = mongoose.connection;
-
-// 链接错误
-db.on('error', function(error) {
-	console.log(error);
-});
+var db = require('./db.js');
 
 // Schema 结构
 var healthSchema = new mongoose.Schema({
@@ -28,23 +21,79 @@ var healthSchema = new mongoose.Schema({
 	}
 });
 
-// 添加 mongoose 静态方法，静态方法在Model层就能使用
-healthSchema.statics.findbydorm = function(dorm, callback) {
-	return this.model('mongoose').find({
-		dorm: dorm
-	}, callback);
+healthSchema.statics.findall = function(orderBy, dorm_filter, room_filter, page, limit, callback) {
+	if ((dorm_filter !== "all") && (room_filter !== "all")) {
+
+		return this.model('mongoose').find({
+			"dorm": dorm_filter,
+			"room": room_filter
+		}).skip((page - 1) * limit).limit(limit).sort(orderBy).exec(callback);
+
+	}
+
+	if ((dorm_filter === "all") && (room_filter !== "all")) {
+
+		return this.model('mongoose').find({
+			"room": room_filter
+		}).skip((page - 1) * limit).limit(limit).sort(orderBy).exec(callback);
+
+	}
+
+	if ((dorm_filter !== "all") && (room_filter === "all")) {
+
+		return this.model('mongoose').find({
+			"dorm": dorm_filter
+		}).skip((page - 1) * limit).limit(limit).sort(orderBy).exec(callback);
+
+	}
+
+	if ((dorm_filter === "all") && (room_filter === "all")) {
+
+		return this.model('mongoose').find("").skip((page - 1) * limit).limit(limit).sort(orderBy).exec(callback);
+
+	}
+}
+
+healthSchema.statics.countSum = function(dorm_filter, room_filter, callback) {
+
+
+	if ((dorm_filter !== "all") && (room_filter !== "all")) {
+
+		return this.model('mongoose').find({
+			"dorm": dorm_filter,
+			"room": room_filter
+		}).count("", callback);
+
+	}
+
+	if ((dorm_filter === "all") && (room_filter !== "all")) {
+
+		return this.model('mongoose').find({
+			"room": room_filter
+		}).count("", callback);
+
+	}
+
+	if ((dorm_filter !== "all") && (room_filter === "all")) {
+
+		return this.model('mongoose').find({
+			"dorm": dorm_filter
+		}).count("", callback);
+
+	}
+
+	if ((dorm_filter === "all") && (room_filter === "all")) {
+
+		return this.model('mongoose').count("", callback);
+
+	}
+
+
 }
 
 // model
-var healthModel = db.model('mongoose', healthSchema);
+var healthModel = db.model('mongoose', healthSchema, "health");
 
-// 基于静态方法的查询
-healthModel.findbydorm('516', function(error, result) {
-	if (error) {
-		console.log(error);
-	} else {
-		console.log(result);
-	}
-	//关闭数据库链接
-	db.close();
-});
+
+
+module.exports = healthModel;
