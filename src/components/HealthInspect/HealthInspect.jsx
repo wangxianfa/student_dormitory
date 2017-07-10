@@ -162,7 +162,7 @@ class HealthInspect extends React.Component {
                     <td>卫生状况详情</td>
                     <td><Link to={{
                         "pathname":"/health/indoorscene",
-                        "query":{"buidid":elem.bid, "roomid":elem.rid}
+                        "query":{"dorm":elem.dorm, "room":elem.room}
                     }}>查看</Link></td>
                     <td>{elem.date_time}</td>
                 </tr>
