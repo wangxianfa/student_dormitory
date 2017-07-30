@@ -13,7 +13,7 @@ class HealthInspect extends React.Component {
             "room" : [],
             "healthdetail" : [],
             "currentPage" : 1,
-            "pageSize" : 20,
+            "pageSize" : 10,
             "orderBy" : "dorm",
             "dorm_filter" : "all",
             "room_filter" : "all"
@@ -45,6 +45,7 @@ class HealthInspect extends React.Component {
 
         ajax({"url": `http://localhost:3000/health?page=${page}&pageSize=${pageSize}&orderBy=${orderBy}&dorm_filter=${dorm_filter}&room_filter=${room_filter}`})
         .then((result) => {
+
             //成功
             var data = JSON.parse(result).data;
             var count = JSON.parse(result).count;
@@ -67,6 +68,8 @@ class HealthInspect extends React.Component {
     fetchDorm(){
         ajax({"url": `http://localhost:3000/health/fetchdorm`})
         .then((result) => {
+
+            // console.log(result)
             //成功
             var data = JSON.parse(result);
             var dorm = [];

@@ -19,7 +19,7 @@ var healthSchema = new mongoose.Schema({
 		type: Date,
 		default: Date.now
 	}
-});
+},{collection: 'health'});
 
 healthSchema.statics.findall = function(orderBy, dorm_filter, room_filter, page, limit, callback) {
 	if ((dorm_filter !== "all") && (room_filter !== "all")) {

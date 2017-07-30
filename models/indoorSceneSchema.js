@@ -9,32 +9,27 @@ var indoorSceneSchema = new mongoose.Schema({
 	rid: {
 		type: String
 	},
-	contents: new mongoose.Schema({
+	contents: {
 		img: {
 			type: Array
 		},
 		records: {
 			type: Array
 		}
-	})
-});
+	}
+},{collection: 'indoorscene'});
 
 
-indoorSceneSchema.statics.findData = function(dorm, room, callback) {
-	return this.model('mongoose').find({
-		"did": 1,
-		"rid": 101
+indoorSceneSchema.statics.finddata = function(dorm, room, callback) {
+	console.log(dorm, room)
+	return indoorSceneModel.find({
+		"did": dorm,
+		"rid": room
 	}).select("contents").exec(callback);
 }
 
 // model
-var indoorSceneModel = db.model('mongoose', indoorSceneSchema, "indoorscene");
-
-
-indoorSceneModel.findData(1, 100, (err, data) => {
-	console.log(data);
-})
-
+var indoorSceneModel = db.model('mongoose', indoorSceneSchema, 'indoorscene');
 
 
 module.exports = indoorSceneModel;

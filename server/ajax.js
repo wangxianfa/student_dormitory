@@ -61,5 +61,3 @@ exports.ajax = function ajax(config) {
 	});
 
 }
-
-//export default ajax;
