@@ -34,8 +34,6 @@ exports.showHealth = (req, res) => {
 				"count": count
 			}
 
-			console.log(newData)
-
 			res.send(newData)
 
 		})
@@ -49,7 +47,7 @@ exports.fetchDorm = (req, res) => {
 	res.header('Access-Control-Allow-Origin', "http://localhost:8088");
 
 	healthModel.findDorm((err, data) => {
-		console.log(data);
+		// console.log(data);
 		res.send(data);
 	})
 
@@ -63,7 +61,7 @@ exports.fetchRorm = (req, res) => {
 
 	healthModel.findRoom(dorm, (err, data) => {
 
-		console.log(data);
+		// console.log(data);
 		res.send(data);
 
 	})

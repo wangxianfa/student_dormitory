@@ -116,10 +116,17 @@ header .headContent{
 
 .pics{
     width:680px;
+    height: 360px;
     border:1px solid skyblue;
     position: absolute;
     right:0;
     top:0;
+}
+.pics>span{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
 }
 .pics img{
     width:100%;
