@@ -6,6 +6,7 @@ import arowRight from '../../../src/images/arrow_right.png';
 import dormitory from '../../../src/images/dormitory.png';
 import notice from '../../../src/images/notice.png';
 
+import Footer from '../PublicComp/Footer/Footer';
 
 class Home extends React.Component {
 
@@ -137,18 +138,7 @@ class Home extends React.Component {
                     </div>
 
                 </div>
-                <footer>
-                    <div className="copyrighy">
-                        <h4>版权所有© 2016 中南民族大学<em></em>邮编 430074</h4>
-                        <p>
-                            <span>联系我们</span>
-                            <em>|</em>
-                            <span>旧版登录</span>
-                            <em>|</em>
-                            <span>技术支持</span>
-                        </p>
-                    </div>
-                </footer>
+                <Footer />
             </div>
 
         );

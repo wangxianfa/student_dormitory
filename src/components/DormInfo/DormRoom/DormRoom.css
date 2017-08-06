@@ -1,0 +1,80 @@
+#roomMain>.roomContent{
+    width: 980px;
+    background: url('../../../../src/images/roombg.png') repeat;
+    margin: 0 auto;
+    position: relative;
+}
+.roomContent{
+    min-height:560px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.room{
+    width: 100%;
+    min-height:560px;
+}
+.roomContent>.light1,.roomContent>.light2{
+    display: inline-block;
+    width:203px;
+    position: absolute;
+    height:100%;
+    top: 0;
+}
+.roomContent>.light1{
+    background:url('../../../../src/images/room_1.png') no-repeat;
+    left: -110px;
+}
+.roomContent>.light2{
+    background:url('../../../../src/images/room_2.png') no-repeat;
+    right: -94px;
+}
+.roommessage{
+    width:640px;
+    min-height:520px;
+    margin: 0 auto;
+}
+.roommessage h3{
+    text-align: center;
+    padding: 2.5em 0 1.2em;
+    border-bottom: 1px dashed lightgray;
+    margin-top: 0;
+}
+.roomfilter{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 52px;
+}
+.roomfilter select,.roomfilter input{
+    width:200px;
+    height:30px;
+    box-sizing: border-box;
+    outline:none;
+}
+.roomfilter input{
+    text-align: center;
+}
+.roommessage>a>.btn{
+    height:30px;
+    display: flex;
+    align-items: center;
+    //border:1px solid skyblue;
+    margin-top: 32px;
+    background: green;
+}
+.roommessage>a>.btn>span{
+    display: inline-block;
+    width:15px;
+    height:15px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin-right: 6px;
+}
+.roommessage>a>.btn>em{
+    display: inline-block;
+    line-height: 16px;
+    font-size: 15px;
+    color:#fff;
+}

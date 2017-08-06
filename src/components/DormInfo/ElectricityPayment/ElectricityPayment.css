@@ -1,0 +1,90 @@
+.electricityPayment{
+    background-color: rgba(255,255,255,0.9);
+    padding-top: 20px;
+    padding-bottom: 24px;
+    min-height: 560px;
+    width: 980px;
+    position: relative;
+}
+.electricityPayment h3{
+    margin: 1em 0 0;
+    padding: 1em 0 1.5em;
+    text-align: center;
+    border-bottom: 1px dashed lightgray;
+}
+.electricityPayment>.InoutFilter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.electricityPayment>.InoutFilter>p{
+    height:36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.6em;
+    line-height: 18px;
+}
+.electricityPayment>.InoutFilter>p>select{
+    width:200px;
+    height:30px;
+    box-sizing: border-box;
+}
+.electricityPayment>.InoutFilter>p:nth-of-type(2)>select{
+    width: 100px;
+}
+.electricityPayment>.InoutFilter>p>input{
+    width:220px;
+    height:32px;
+    box-sizing: border-box;
+    margin-right: 1em;
+    text-align: center;
+}
+.electricityPayment>.InoutFilter>p img{
+    display: inline-block;
+    height:18px;
+    cursor: pointer;
+}
+.InoutFilter>p:nth-of-type(2)>span:nth-of-type(2){
+    margin-left: 24px;
+}
+.electricityPayment>table{
+    width: 94%;
+    border-collapse:collapse;
+    margin: 2em auto 2em;
+}
+.electricityPayment tr{
+    height: 42px;
+    text-align: center;
+    line-height: 25px;
+}
+.electricityPayment thead{
+    background: #f8f8f8;
+    font-size: 15px;
+}
+.electricityPayment tr>td{
+    border: 1px solid lightgray;
+    margin: 0;
+}
+.electricityPayment tbody tr:nth-child(odd){
+    background:#E0FFFF;
+}
+.electricityPayment tbody tr:nth-child(even){
+    background:#FFF0F5;
+}
+.page{
+    display: flex;
+    justify-content: center;
+}
+.page li{
+    height:36px;
+    border:1px solid lightgray;
+    list-style: none;
+    margin: 0 1em;
+    text-align: center;
+    line-height:36px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding:0 1em;
+    cursor: pointer;
+}
