@@ -6,6 +6,8 @@ import dormitory from '../../../src/images/dormitory.png';
 import erweima from '../../../src/images/二维码.png';
 import search from '../../../src/images/search.png';
 
+import Footer from '../PublicComp/Footer/Footer';
+
 class StudentDormitory extends React.Component {
     render() {
         return (
@@ -73,18 +75,7 @@ class StudentDormitory extends React.Component {
                         </div>
                     </nav>
                 </div>
-                <footer>
-                    <div className="copyrighy">
-                        <h4>版权所有© 2016 中南民族大学<em></em>邮编 430074</h4>
-                        <p>
-                            <span>联系我们</span>
-                            <em>|</em>
-                            <span>旧版登录</span>
-                            <em>|</em>
-                            <span>技术支持</span>
-                        </p>
-                    </div>
-                </footer>
+                <Footer />
             </div>
         );
     }

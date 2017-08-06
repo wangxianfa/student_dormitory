@@ -7,49 +7,68 @@ import {
     browserHistory
 } from 'react-router';
 
+// 项目主页
 import Home from './components/Home/Home';
+
+// 内部主页
 import StudentDormitory from './components/Student_dormitory/Student_dormitory';
-import SDHome from './components/SDHome/SDHome';
-import BuildingMsg from './components/BuildingMsg/BuildingMsg';
-import StudentMsg from './components/StudentMsg/StudentMsg';
-import AddStudentMsg from './components/AddStudentMsg/AddStudentMsg.jsx';
-import AddCheckinMsg from './components/AddCheckinMsg/AddCheckinMsg.jsx';
-import DormRepair from './components/DormRepair/DormRepair';
-import DormEmployee from './components/DormEmployee/DormEmployee';
-import DormRoom from './components/DormRoom/DormRoom';
-import CheckManage from './components/CheckManage/CheckManage';
-import LateManage from './components/LateManage/LateManage';
-import Login from './components/Login/Login';
-import RoomMseeageSearch from './components/RoomMseeageSearch/RoomMseeageSearch';
-import RoomFee from './components/RoomFee/RoomFee';
-import DormDetail from './components/DormDetail/DormDetail';
-import EmployeeMsg from './components/EmployeeMsg/EmployeeMsg';
-import InOut from './components/InOut/InOut';
-import HealthManage from './components/HealthManage/HealthManage';
-import InOutForm from './components/InOutForm/InOutForm';
-import InOutDetail from './components/InOutDetail/InOutDetail';
-import RoomDetail from './components/RoomDetail/RoomDetail';
-import HealthInspect from './components/HealthInspect/HealthInspect';
-import IndoorScene from './components/IndoorScene/IndoorScene';
-import StudentMsgSearch from './components/StudentMsgSearch/StudentMsgSearch';
-import LateRegistration from './components/LateRegistration/LateRegistration';
-import ElectricityPayment from './components/ElectricityPayment/ElectricityPayment';
 
-import StudentsFilter from './components/StudentsFilter/StudentsFilter';
-import StudentDormMsg from './components/StudentDormMsg/StudentDormMsg';
-import PersonalMsg from './components/PersonalMsg/PersonalMsg';
+// 认证
+import Login from './components/Certification/Login/Login';
 
+// 内部主页
+import SDHome from './components/StuDormHome/SDHome/SDHome';
+
+// 学生信息管理
+import StudentMsg from './components/StuInfoManage/StudentMsg/StudentMsg';
+import StudentMsgSearch from './components/StuInfoManage/StudentMsgSearch/StudentMsgSearch';
+import LateManage from './components/StuInfoManage/LateManage/LateManage';
+import LateRegistration from './components/StuInfoManage/LateRegistration/LateRegistration';
+import AddStudentMsg from './components/StuInfoManage/AddStudentMsg/AddStudentMsg.jsx';
+import AddCheckinMsg from './components/StuInfoManage/AddCheckinMsg/AddCheckinMsg.jsx';
+import StudentsFilter from './components/StuInfoManage/StudentsFilter/StudentsFilter';
+import StudentDormMsg from './components/StuInfoManage/StudentDormMsg/StudentDormMsg';
+import CheckManage from './components/StuInfoManage/CheckManage/CheckManage';
+import PersonalMsg from './components/StuInfoManage/PersonalMsg/PersonalMsg';
+
+// 公物报修
+import DormRepair from './components/RepairService/DormRepair/DormRepair';
+
+// 宿舍信息
+import DormRoom from './components/DormInfo/DormRoom/DormRoom';
+import RoomDetail from './components/DormInfo/RoomDetail/RoomDetail';
+import ElectricityPayment from './components/DormInfo/ElectricityPayment/ElectricityPayment';
+import RoomMseeageSearch from './components/DormInfo/RoomMseeageSearch/RoomMseeageSearch';
+import RoomFee from './components/DormInfo/RoomFee/RoomFee';
+
+// 员工信息
+import DormEmployee from './components/StaffsInfo/DormEmployee/DormEmployee';
+import EmployeeMsg from './components/StaffsInfo/EmployeeMsg/EmployeeMsg';
+
+// 楼栋信息
+import BuildingMsg from './components/BuildingInfo/BuildingMsg/BuildingMsg';
+import DormDetail from './components/BuildingInfo/DormDetail/DormDetail';
+
+// 贵重物品出入
+import InOut from './components/Valuables/InOut/InOut';
+import InOutForm from './components/Valuables/InOutForm/InOutForm';
+import InOutDetail from './components/Valuables/InOutDetail/InOutDetail';
+
+// 宿舍卫生
+import HealthManage from './components/DormitoryHygiene/HealthManage/HealthManage';
+import IndoorScene from './components/DormitoryHygiene/IndoorScene/IndoorScene';
+import HealthInspect from './components/DormitoryHygiene/HealthInspect/HealthInspect';
 
 //通知公告
-import Announcement from './components/Announcement/Announcement';
-import SchoolNews from './components/SchoolNews/SchoolNews';
-import NewsDetail from './components/NewsDetail/NewsDetail';
+import Announcement from './components/NoticeAndAnnouncement/Announcement/Announcement';
+import SchoolNews from './components/NoticeAndAnnouncement/SchoolNews/SchoolNews';
+import NewsDetail from './components/NoticeAndAnnouncement/NewsDetail/NewsDetail';
 
 
 //外来人员来访
-import OutsidersVisit from './components/OutsidersVisit/OutsidersVisit';
-import OutsidersRg from './components/OutsidersRg/OutsidersRg';
-import OutsidersRecords from './components/OutsidersRecords/OutsidersRecords';
+import OutsidersVisit from './components/VisitorsManage/OutsidersVisit/OutsidersVisit';
+import OutsidersRg from './components/VisitorsManage/OutsidersRg/OutsidersRg';
+import OutsidersRecords from './components/VisitorsManage/OutsidersRecords/OutsidersRecords';
 
 //个人中心
 import PersonCenter from './components/PersonCenter/PersonCenter';

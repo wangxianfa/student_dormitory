@@ -1,0 +1,78 @@
+.employeeDetail{
+    width: 980px;
+    min-height: 600px;
+    background: url('../../../images/employee.png') no-repeat;
+    margin: 42px auto 32px;
+    background-position: 20% 90%;
+    border: 1px solid skyblue;
+    box-sizing: border-box;
+    background-size: auto 240px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 20px skyblue;
+}
+
+.touxiang{
+    width:200px;
+    height:200px;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    right: 4em;
+    top: 2em;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.touxiang img{
+    height: 120px;
+}
+.touxiang>em{
+    display: block;
+    font-size: 14px;
+    text-align: center;
+}
+.EmployeeMsgl{
+    width:520px;
+    min-height:240px;
+    margin-left: 8em;
+    margin-top: 1em;
+}
+.EmployeeMsgb{
+    width:400px;
+    min-height:240px;
+    position: absolute;
+    right:2em;
+    bottom: 3em;
+}
+.EmployeeMsgl>h3{
+    margin:0;
+    text-align: center;
+    padding: .8em 0;
+    border-bottom: 2px solid lightgreen;
+}
+.EmployeeMsgl p,.EmployeeMsgb p{
+    border-bottom: 1px dashed lightgray;
+    margin:0;
+   line-height:42px;
+}
+.EmployeeMsgl p{
+    text-align: center;
+}
+.EmployeeMsgl p>span,.EmployeeMsgl p>em{
+    display: inline-block;
+    width:20%;
+}
+.EmployeeMsgl p>span{
+    text-align: right;
+    margin-right: 1em;
+}
+.EmployeeMsgl p>em{
+    text-align: left;
+}
+.EmployeeMsgb p>span{
+    display: inline-block;
+    width:32%;
+    text-align: right;
+    margin-right: 1em;
+    line-height: 42px;
+}

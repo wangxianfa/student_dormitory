@@ -1,0 +1,13 @@
+#HealthManage{
+    position: relative;
+}
+#HealthManage>p{
+    width:980px;
+    margin: 40px auto .8em;
+}
+.health{
+    width: 980px;
+    min-height: 600px;
+    margin: 0 auto 52px;
+    border: 1px solid lightskyblue;
+}
