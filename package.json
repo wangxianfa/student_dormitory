@@ -58,9 +58,10 @@
   },
   "start": "webpack-dev-server --inline --content-base . --history-api-fallback",
   "scripts": {
-    "start": "node scripts/start.js",
+    "dev": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "start": "node ./app.js"
   },
   "jest": {
     "collectCoverageFrom": [

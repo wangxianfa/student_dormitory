@@ -1,7 +1,5 @@
 import React from 'react';
-import './StudentMsgSearch.css';
-import search from '../../../../src/images/search.png';
-import edit from '../../../../src/images/edit.png';
+import './StudentMsgSearch.scss';
 import { Link } from 'react-router';
 
 class StudentMsgSearch extends React.Component {
@@ -29,7 +27,7 @@ class StudentMsgSearch extends React.Component {
                                     "query" : {}
                                 }}>
                                     <span className="btn">
-                                        <span><img src={search} alt="搜索" /></span>
+                                        <span><img src='/images/search.png' alt="搜索" /></span>
                                         <em>查询</em>
                                     </span>
                                 </Link>
@@ -37,7 +35,7 @@ class StudentMsgSearch extends React.Component {
                         </div>
                         <p>
                             <Link to="/StudentMsg/addstuMsg">
-                                <span><img src={edit} alt="学生添加" /></span>
+                                <span><img src='/images/edit.png' alt="学生添加" /></span>
                                 <em>学生信息添加</em>
                             </Link>
                         </p>

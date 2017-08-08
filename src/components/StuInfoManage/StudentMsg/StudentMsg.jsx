@@ -1,7 +1,6 @@
 import React from 'react';
-import './StudentMsg.css';
+import './StudentMsg.scss';
 import {Link} from 'react-router';
-import stuManage from '../../../../src/images/stuMessage.png';
 
 import Footer from '../../PublicComp/Footer/Footer';
 
@@ -19,7 +18,7 @@ class StudentMsg extends React.Component {
             <div className="StudentMsg">
                 <div id="sdhead">
                     <div className="wrap">
-                        <span><img src={stuManage} alt="学生宿舍管理log" /></span>
+                        <span><img src='/images/stuMessage.png' alt="学生宿舍管理log" /></span>
                         <span>学生宿舍管理平台<em>----学生信息管理</em></span>
                     </div>
                 </div>

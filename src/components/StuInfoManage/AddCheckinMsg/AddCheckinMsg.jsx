@@ -1,5 +1,5 @@
 import React from 'react';
-import './AddCheckinMsg.css';
+import './AddCheckinMsg.scss';
 
 class AddCheckinMsg extends React.Component {
 

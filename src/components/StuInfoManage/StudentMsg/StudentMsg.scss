@@ -1,0 +1,52 @@
+*{
+    list-style-type: none;
+}
+
+.StudentMsg{
+
+    >#smWrap{
+
+        >nav{
+            width:980px;
+            margin: 20px auto;
+            background:url('/images/bar.png') repeat-x;
+
+            >ul{
+                display: flex;
+                justify-content: flex-start;
+                margin:0;
+
+                li{
+                    line-height: 45px;
+                    margin: 0 12px;
+                    padding: 0 10px;
+                    cursor: pointer;
+                    color: white;
+                    font-size: 16px;
+                }
+
+            }
+        }
+
+    }
+
+}
+
+#smWrap nav,#roomMain nav{
+    width:980px;
+    margin: 20px auto;
+    background:url('../../../../src/images/bar.png') repeat-x;
+}
+#smWrap>nav>ul,#roomMain>nav>ul{
+    display: flex;
+    justify-content: flex-start;
+    margin:0;
+}
+#smWrap>nav>ul li,#roomMain>nav>ul li{
+    line-height: 45px;
+    margin: 0 12px;
+    padding: 0 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}

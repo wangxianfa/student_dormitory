@@ -1,5 +1,5 @@
 import React from 'react';
-import './LateManage.css';
+import './LateManage.scss';
 import { Link } from "react-router";
 
 

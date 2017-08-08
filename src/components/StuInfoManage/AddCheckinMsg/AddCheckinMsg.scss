@@ -1,0 +1,15 @@
+.smContent>.smdiv>form{
+    >.message_wrap{
+        p>select{
+            width: 220px;
+            height: 32px;
+            box-sizing: border-box;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        >p:nth-of-type(1){
+            margin-top: 32px;
+        }
+    }
+}

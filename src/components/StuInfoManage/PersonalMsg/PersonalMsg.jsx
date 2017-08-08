@@ -1,7 +1,5 @@
 import React from 'react';
-import './PersonalMsg.css';
-import stuManage from '../../../../src/images/stuMessage.png';
-import touxiang from '../../../../src/images/touxiang.png';
+import './PersonalMsg.scss';
 import { Link } from 'react-router';
 
 export default class PersonalMsg extends React.Component {
@@ -33,14 +31,14 @@ export default class PersonalMsg extends React.Component {
       <div className="personalMsg">
 			<div id="sdhead">
                 <div className="wrap">
-                    <span><img src={stuManage} alt="学生宿舍管理log" /></span>
+                    <span><img src='/images/stuMessage.png' alt="学生宿舍管理log" /></span>
                     <span>学生信息管理平台<em></em></span>
                 </div>
             </div>
             <div className="detailmsg">
                 <div id="pmsgleft">
                     <span className="personalPicture">
-                        <img src={touxiang} alt="头像"/>
+                        <img src='/images/touxiang.png' alt="头像"/>
                     </span>
                     <div id="pintro">
                         <span>个人介绍：</span>
