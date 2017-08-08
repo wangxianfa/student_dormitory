@@ -1,0 +1,104 @@
+.personalMsg>.detailmsg{
+	width: 980px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	min-height: 600px;
+	//border: 1px solid #d8d8d8;
+	margin: 20px auto;
+	//box-shadow: 0 0 40px #f8f8f8;
+	/*column-count: 2;*/
+	position: relative;
+	background: url("../../../images/roombg.png") repeat;
+	padding-bottom: 2em;
+
+	>#pmsgleft{
+		width: 240px;
+		float: left;
+		margin-top: 2em;
+		-webkit-box-shadow: 0 0 20px #f8f8f8;
+		box-shadow: 0 0 20px #f8f8f8;
+		padding: 20px 0 2em;
+		margin-left: 12px;
+		background: #fff;
+
+		>.personalPicture{
+			display: inline-block;
+			text-align: center;
+
+			>img{
+				width: 70%;
+			}
+
+		}
+
+		>#pintro{
+			width: 86%;
+			margin: 10px auto;
+
+			>span{
+				font-size: 15px;
+				font-weight: bold;
+			}
+
+			>p{
+				font-size: 14px;
+				color:#666;
+				line-height: 24px;
+				text-indent: 2em;
+			}
+
+		}
+
+	}
+
+	>#pmsgright{
+		width: 700px;
+		float: right;
+
+		>.sdhead{
+			margin: 2em 0 1em;
+			padding-bottom: 16px;
+			border-bottom: 1px solid skyblue;
+			margin-right: 24px;
+		}
+
+		>.basemsg{
+
+			>p{
+				display: inline-block;
+				width: 40%;
+				height: 32px;
+				font-size: 16px;
+				margin: 0 5%;
+				line-height: 32px;
+				border-bottom: 2px dashed #fff;
+				padding: 10px 0;
+
+				>span{
+					width: 120px;
+					display: inline-block;
+					text-align: right;
+				}
+
+				>em{
+					text-indent: 1.5em;
+					display: inline-block;
+				}
+
+			}
+
+		}
+
+		>.lateRc, >.inoutRc{
+			min-height: 24px;
+		}
+		
+	}
+
+	>.clearfix{
+		clear: both;
+	}
+
+}
+

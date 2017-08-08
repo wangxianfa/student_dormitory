@@ -1,7 +1,5 @@
 import React from 'react';
-import './CheckManage.css';
-import search from '../../../../src/images/search.png';
-import edit from '../../../../src/images/edit.png';
+import './CheckManage.scss';
 import { Link } from "react-router";
 
 
@@ -29,7 +27,7 @@ class CheckManage extends React.Component {
                                 "query" : {}
                             }}>
                                 <span className="btn">
-                                    <span><img src={search} alt="搜索" /></span>
+                                    <span><img src='/images/search.png' alt="搜索" /></span>
                                     <em>查询</em>
                                 </span>
                             </Link>
@@ -37,7 +35,7 @@ class CheckManage extends React.Component {
                     </div>
                     <p>
                         <Link to="/StudentMsg/addcheckinMsg">
-                            <span><img src={edit} alt="学生宿舍管理log" /></span>
+                            <span><img src='/images/edit.png' alt="学生宿舍管理log" /></span>
                             <em>添加入住信息</em>
                         </Link>
                     </p>

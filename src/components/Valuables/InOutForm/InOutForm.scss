@@ -1,0 +1,80 @@
+.InOutForm{
+
+  >.admitForm{
+
+    >p{
+        line-height: 32px;
+        text-align: center;
+        margin:1.2em 0;
+
+        >span{
+            display: inline-block;
+            width:6em;
+            text-align: right;
+            margin-right: 1em;
+        }
+
+        input[type=radio]{
+            margin-left: 2em;
+        }
+
+        >.radioStyl{
+            text-align: left;
+            margin-right: 0;
+        }
+
+        >input[type=text], >select, >.radioStyl{
+            display: inline-block;
+            width:260px;
+            height: 32px;
+            box-sizing: border-box;
+        }
+
+        >textarea{
+            min-width: 360px;
+            max-width: 320px;
+            min-height:7em;
+            text-indent: 1em;
+            resize: none;
+            font-size: 15px;
+            color: #333;
+            line-height: 20px;
+            padding: 12px 10px;
+            box-sizing: border-box;
+        }
+
+        >input[type=button], >a>input[type=button]{
+            width:120px;
+            height:34px;
+            box-sizing: border-box;
+            background: green;
+            border:none;
+            margin: 0 1em;
+            font-size: 15px;
+            color: white;
+            cursor: pointer;
+        }
+
+        >a{
+
+          &>input[type=button]{
+              width:120px;
+              height:34px;
+              display: inline-block;
+              background: blue;
+          }
+
+        }
+
+    }
+
+    >p:nth-of-type(1){
+        margin-top: 4em;
+    }
+
+    >p:nth-last-of-type(1){
+        margin-top: 2em;
+    }
+
+  }
+}

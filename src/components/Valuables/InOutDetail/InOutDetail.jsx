@@ -1,7 +1,5 @@
 import React from 'react';
-import './InOutDetail.css';
-import search from '../../../../src/images/search.png';
-
+import './InOutDetail.scss';
 
 class InOutDetail extends React.Component {
 
@@ -81,7 +79,7 @@ class InOutDetail extends React.Component {
                     </p>
                     <p>
                         <input type="text" placeholder="要查询的条件" />
-                        <span><img src={search} alt="搜索" /></span>
+                        <span><img src='/images/search.png' alt="搜索" /></span>
                     </p>
                 </div>
                 <table>

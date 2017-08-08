@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-import './InOutForm.css';
+import './InOutForm.scss';
 
 
 class InOutForm extends React.Component {
@@ -19,10 +19,10 @@ class InOutForm extends React.Component {
                         </select>
                     </p>
                     <p><span>出入：</span>
-                        <em>
+                        <span className="radioStyl">
                             <input type="radio" name="inout" value="in"/>带入
                             <input type="radio" name="inout" value="out"/>带出
-                        </em>
+                        </span>
                     </p>
                     <p><span>备注：</span><textarea></textarea></p>
                     <p>

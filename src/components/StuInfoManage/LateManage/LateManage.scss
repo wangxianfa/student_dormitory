@@ -1,0 +1,98 @@
+.smContent>.smdiv{
+    height:auto;
+
+    >.checkForm{
+
+        >p{
+            text-align: center;
+            margin-top: 32px;
+
+            >span{
+                display: block;
+                margin: 24px 0;
+
+                >em{
+                    display: inline-block;
+                    width: 100px;
+                    text-align: right;
+                }
+
+                >textarea{
+                    min-width: 360px;
+                    max-width: 360px;
+                    min-height: 7em;
+                    max-height: 7em;
+                    margin-left: 1em;
+                    resize: none;
+                    padding: 12px 10px;
+                    box-sizing: border-box;
+                    font-size: 15px;
+                    color: #333;
+                }
+
+                >input, >select{
+
+                    width: 260px;
+                    height: 30px;
+                    box-sizing: border-box;
+                    margin-left: 1em;
+
+                }
+
+            }
+
+        }
+
+        >.doBtn{
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            >.save{
+                width:64px;
+                height:32px;
+                background: green;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 8px;
+                border:none;
+                cursor: pointer;
+                margin-right: 1em;
+
+                >em{
+                    font-size: 15px;
+                }
+
+                >span{
+                    display: inline-block;
+                    width:16px;
+                    height:16px;
+                    box-sizing: border-box;
+                    border-radius: 50%;
+                    border: 2px solid #fff;
+                    margin-right: 6px;
+                }
+            }
+
+            >a>button{
+                width:120px;
+                height:32px;
+                border:none;
+                background:blue;
+                //border-radius:5px;
+                font-size: 15px;
+                color:white;
+                box-sizing: border-box;
+                margin-left: 1em;
+                cursor:pointer;
+                line-height: 32px;
+            }
+
+        }
+    }
+
+}
+

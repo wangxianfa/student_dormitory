@@ -1,6 +1,5 @@
 import React from 'react';
-import './LateRegistration.css';
-import search from '../../../../src/images/search.png';
+import './LateRegistration.scss';
 
 export default class LateRegistration extends React.Component {
 
@@ -86,7 +85,7 @@ export default class LateRegistration extends React.Component {
 			        </p>
 			        <p>
 			            <input type="text" placeholder="要查询的条件" />
-			            <span><img src={search} alt="搜索" /></span>
+			            <span><img src='/images/search.png' alt="搜索" /></span>
 			        </p>
 			    </div>
 			    <table>

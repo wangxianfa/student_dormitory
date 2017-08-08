@@ -1,0 +1,79 @@
+.smContent{
+
+    >.smdiv{
+
+        >form{
+
+            >span{
+                display: block;
+                text-align: center;
+                margin-top: 30px;
+
+                >button{
+                    width: 120px;
+                    height: 32px;
+                    font-size: 15px;
+                    margin: 0 6px;
+                    background: green;
+                    border: none;
+                    outline: none;
+                    color:#fff;
+                    cursor: pointer;
+                }
+
+                >button:nth-of-type(2){
+                    background: blue;
+                }
+
+            }
+
+            >.message_wrap{
+
+                >p{
+                    text-align: center;
+                    height: 32px;
+                    box-sizing: border-box;
+                    margin-bottom: 20px;
+
+                    >span{
+                        display: inline-block;
+                        height: 32px;
+                        text-align: right;
+                        margin-right: 12px;
+                    }
+
+                    >input{
+                        width: 220px;
+                        height: 32px;
+                        box-sizing: border-box;
+                        font-size: 14px;
+                        text-align: center;
+                    }
+
+                }
+
+                .sex{
+                    
+                    >span:nth-of-type(2){
+                        display: inline-block;
+                        width: 220px;
+                        height: 32px;
+                        text-align: center;
+                        margin-right: 0;
+
+                        &>input{
+                            width: 16px;
+                            height: 16px;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

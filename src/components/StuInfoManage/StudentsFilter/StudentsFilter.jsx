@@ -1,6 +1,5 @@
 import React from 'react';
-import './StudentsFilter.css';
-import search from '../../../../src/images/search.png';
+import './StudentsFilter.scss';
 import { Link } from 'react-router';
 
 export default class StudentsFilter extends React.Component {
@@ -89,7 +88,7 @@ export default class StudentsFilter extends React.Component {
 			        </p>
 			        <p>
 			            <input type="text" placeholder="要查询的条件" />
-			            <span><img src={search} alt="搜索" /></span>
+			            <span><img src='/images/search.png' alt="搜索" /></span>
 			        </p>
 			    </div>
 			    <table>
