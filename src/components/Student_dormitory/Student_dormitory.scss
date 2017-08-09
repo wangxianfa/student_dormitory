@@ -1,0 +1,217 @@
+a,a:hover,a:active,a:visited{
+    color:#000;
+    text-decoration: none;
+}
+
+#StudentDormitory{
+
+    >.container{
+        width:980px;
+        height:auto;
+        margin:20px auto;
+        padding:0;
+        
+        >#sdTop{
+            position: relative;
+
+            >.left{
+                width:320px;
+                float: left;
+                
+                >.login{
+                    width:320px;
+                    height:100%;
+                    border:1px solid lightgray;
+                    background:white;
+                    padding-bottom: 24px;
+
+                    >h4{
+                        font-size: 15px;
+                        text-align: center;
+                        border-bottom: 1px solid lightgray;
+                        padding: 16px 0;
+                        font-weight: bold;
+                        margin-top: 0;
+                    }
+
+                    >form{
+                        text-align: center;
+
+                        &>p{
+                            text-align: center;
+                            font-size: 15px;
+                            line-height: 24px;
+                            margin: 16px 0;
+                        }
+
+                        input{
+                            width:196px;
+                            height:30px;
+                            box-sizing: border-box;
+                            text-indent: 2em;
+                            outline: none;
+                        }
+
+                        >a{
+                            display: block;
+                            margin-top: -6px;
+                            text-align: right;
+
+                            &>span{
+                                font-size: 14px;
+                                margin-right: 32px;
+                                color: #48D1CC;
+                            }
+
+                        }
+
+                        >input[type = button]{
+                            width:160px;
+                            height:32px;
+                            font-size: 16px;
+                            text-indent: 0;
+                            background:#21c6cd;
+                            border: none;
+                            border-radius: 6px;
+                            color: white;
+                            margin-top: 10px;
+                        }
+
+                    }
+
+                }
+
+                >.search{
+                    margin-top: 40px;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &>.searchImg{
+                        display: flex;
+                        align-items: center;
+                        margin-left: 14px;
+                        cursor: pointer;
+
+                        &>img{
+                            height:18px;
+                        }
+
+                    }
+
+                    >input{
+                        text-align: center;
+                        width:176px;
+                        height:28px;
+                        box-sizing: border-box;
+                        outline:none;
+                    }
+
+                    >em{
+                        font-size: 15px;
+                        font-style: normal;
+                    }
+
+                }
+
+                >.Link{
+                    margin-top: 50px;
+
+                    >p{
+                        text-align: left;
+                        margin-bottom: 24px;
+
+                        >span{
+                            display: inline-block;
+                            margin:10px auto;
+
+                            &>img{
+                                width:130px;
+                                margin-top: 10px;
+                            }
+
+                        }
+
+                        >em{
+                            font-size: 15px;
+                            display: block;
+                            font-style: normal;
+                        }
+
+                        >em:nth-of-type(1){
+                            text-align: left;
+                            line-height:32px;
+                            font-size: 15px;
+                            font-style: normal;
+                            margin-top: 20px;
+                        }
+
+                    }
+
+                    >p:nth-last-of-type(1){
+                        text-align: center;
+                    }
+
+                }
+
+            }
+
+            >.right{
+                width:620px;
+                min-height: 900px;
+                float: right;
+
+                >.nav{
+                    padding-left:0;
+                    display: flex;
+                    justify-content: space-around;
+                    background:skyblue;
+
+                    &>.active{
+                        background:white;
+                        border-radius:10px 10px 0 0;
+                        color: black;
+                    }
+
+                    li{
+                        list-style: none;
+                        height:35px;
+                        line-height:35px;
+                        padding:0 10px;
+                        cursor: pointer;
+                        font-size: 15px;
+                    }
+
+                    li:hover{
+                        background:white;
+                        border-radius:10px 10px 0 0;
+                    }
+
+                }
+
+                >.pics{
+                    width:100%;
+                    height:205px;
+                    position:relative;
+                    border:none;
+                    padding:10px 10px 10px 10px;
+
+                    img{
+                        height:100%;
+                    }
+
+                }
+
+            }
+
+        }
+
+        >.clearfix{
+            overflow: hidden;
+            _zoom:1;
+        }
+
+    }
+
+}

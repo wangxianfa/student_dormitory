@@ -1,23 +1,15 @@
 import React from 'react';
-import './Student_dormitory.css';
+import './Student_dormitory.scss';
 import {Link} from 'react-router';
-import stuManage from '../../../src/images/stuMessage.png';
-import dormitory from '../../../src/images/dormitory.png';
-import erweima from '../../../src/images/二维码.png';
-import search from '../../../src/images/search.png';
 
+import Header from '../PublicComp/Header/Header';
 import Footer from '../PublicComp/Footer/Footer';
 
 class StudentDormitory extends React.Component {
     render() {
         return (
             <div id="StudentDormitory">
-                <div id="sdhead">
-                    <div className="wrap">
-                        <span><img src={stuManage} alt="学生宿舍管理log" /></span>
-                        <span>学生宿舍管理平台</span>
-                    </div>
-                </div>
+                <Header showSecondLevelMenu='0' />
                 <div className="container">
                     <nav id="sdTop" className="clearfix">
                         <div className="left">
@@ -34,7 +26,7 @@ class StudentDormitory extends React.Component {
                             <p className="search">
                                 <em>站内搜索：</em>
                                 <input type="text" placeholder="输入宿舍编号或名称" />
-                                <span className="searchImg"><img src={search} alt="搜索" /></span>
+                                <span className="searchImg"><img src='/images/search.png' alt="搜索" /></span>
                             </p>
                             <div className="Link">
                                 <h4>友情链接</h4>
@@ -42,7 +34,7 @@ class StudentDormitory extends React.Component {
                                 <p>校医院电话：027-25486897</p>
                                 <p>
                                     <em>学校官方宿舍管理微信：</em>
-                                    <span><img src={erweima} alt="二维码" /></span>
+                                    <span><img src='/images/二维码.png' alt="二维码" /></span>
                                     <em>扫码关注</em>
                                 </p>
                             </div>
@@ -69,7 +61,7 @@ class StudentDormitory extends React.Component {
                                 </Link>
                             </ul>
                             <div className="pics">
-                                <span><img src={dormitory} alt="学生宿舍" /></span>
+                                <span><img src='/images/dormitory.png' alt="学生宿舍" /></span>
                             </div>
                             {this.props.children}
                         </div>

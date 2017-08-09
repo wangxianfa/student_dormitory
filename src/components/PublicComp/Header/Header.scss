@@ -1,0 +1,45 @@
+#sdhead{
+
+    >.wrap{
+        width: 980px;
+        height: 160px;
+        background: url('/images/sky.png');
+        background-size: cover;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        >span:nth-of-type(1){
+            height:160px;
+            display: flex;
+            align-items: center;
+            margin-left: 50px;
+
+            >img{
+                height:120px;
+            }
+
+        }
+
+        >span:nth-of-type(2){
+            font-size: 32px;
+            font-weight: bold;
+            font-style: italic;
+            margin-right: 81px;
+            margin-bottom: 42px;
+            position: relative;
+
+            &>em{
+                display:inline-block;
+                position: absolute;
+                top: 46px;
+                right: -52px;
+                font-size: 18px;
+                font-weight: normal;
+            }
+        }
+
+    }
+
+}

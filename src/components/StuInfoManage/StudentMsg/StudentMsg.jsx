@@ -2,6 +2,7 @@ import React from 'react';
 import './StudentMsg.scss';
 import {Link} from 'react-router';
 
+import Header from '../../PublicComp/Header/Header';
 import Footer from '../../PublicComp/Footer/Footer';
 
 class StudentMsg extends React.Component {
@@ -16,12 +17,7 @@ class StudentMsg extends React.Component {
     render() {
         return (
             <div className="StudentMsg">
-                <div id="sdhead">
-                    <div className="wrap">
-                        <span><img src='/images/stuMessage.png' alt="学生宿舍管理log" /></span>
-                        <span>学生宿舍管理平台<em>----学生信息管理</em></span>
-                    </div>
-                </div>
+                <Header showSecondLevelMenu='1' secondLevelMenu='学生信息管理' />
                 <div id="smWrap">
                     <nav>
                         <ul>
@@ -39,7 +35,6 @@ class StudentMsg extends React.Component {
                     {this.props.children}
                 </div>
                 <Footer />
-
             </div>
         );
     }
