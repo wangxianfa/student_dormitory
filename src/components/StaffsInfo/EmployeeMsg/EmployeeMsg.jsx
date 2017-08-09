@@ -1,8 +1,7 @@
 import React from 'react';
-import './EmployeeMsg.css';
-import stuManage from '../../../../src/images/stuMessage.png';
-import touxiang from '../../../../src/images/touxiang.png';
+import './EmployeeMsg.scss';
 
+import Header from '../../PublicComp/Header/Header';
 import Footer from '../../PublicComp/Footer/Footer';
 
 class EmployeeMsg extends React.Component {
@@ -53,14 +52,9 @@ class EmployeeMsg extends React.Component {
     render() {
         return (
             <div className="EmployeeMsg">
-                <div id="sdhead">
-                    <div className="wrap">
-                        <span><img src={stuManage} alt="学生宿舍管理log" /></span>
-                        <span>学生宿舍管理平台<em>----员工详情</em></span>
-                    </div>
-                </div>
+                <Header showSecondLevelMenu='1' secondLevelMenu='员工详情'/>
                 <div className="employeeDetail">
-                    <span className="touxiang"><img src={touxiang} alt="头像" /><em>{this.state.name}</em></span>
+                    <span className="touxiang"><img src='/images/touxiang.png' alt="头像" /><em>{this.state.name}</em></span>
                     <div className="EmployeeMsgl">
                         <h3>员工信息</h3>
                         <p><span>姓名：</span><em>{this.state.name}</em></p>

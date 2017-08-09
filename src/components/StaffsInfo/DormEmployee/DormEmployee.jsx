@@ -1,7 +1,6 @@
 import React from 'react';
-import './DormEmployee.css';
+import './DormEmployee.scss';
 import {Link} from 'react-router';
-import search from '../../../../src/images/search.png';
 
 
 class DormEmployee extends React.Component {
@@ -30,7 +29,7 @@ class DormEmployee extends React.Component {
         const employeeList = employee.map((elem) => {
             return(<tr key={elem.jobNom}><td>{elem.jobNom}</td><td>{elem.name}</td><td>{elem.sex}</td><td>{elem.whichDorm}</td><td><Link to={{pathname:'/employeeMsg',query:{jobNom:elem.jobNom}}}>查看</Link></td></tr>)
         })
-        console.log(employeeList)
+        // console.log(employeeList)
         return (
             <div className="DormEmployee">
                 <div className="breadNav">
@@ -69,7 +68,7 @@ class DormEmployee extends React.Component {
                                 <input type="radio" name="sex" />楼栋清洁员
                             </div>
                             <div className="btn">
-                                <span><img src={search} alt="搜索" /></span>
+                                <span><img src='/images/search.png' alt="搜索" /></span>
                                 <em>查询</em>
                             </div>
                         </div>

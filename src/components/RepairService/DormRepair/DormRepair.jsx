@@ -1,23 +1,17 @@
 import React from 'react';
-import './DormRepair.css';
-import stuManage from '../../../../src/images/stuMessage.png';
-import repair from '../../../../src/images/repair.png';
+import './DormRepair.scss';
 
+import Header from '../../PublicComp/Header/Header';
 import Footer from '../../PublicComp/Footer/Footer';
 
 class DormRepair extends React.Component {
     render() {
         return (
             <div className="DormRepair">
-                <div id="sdhead">
-                    <div className="wrap">
-                        <span><img src={stuManage} alt="学生宿舍管理log" /></span>
-                        <span>学生宿舍管理平台<em>----公务维修</em></span>
-                    </div>
-                </div>
+                <Header showSecondLevelMenu='1' secondLevelMenu='公物维修' />
                 <div id="repairMain">
                     <div className="repTopbar">
-                        <span><img src={repair} alt="维修图标" /><em>报修系统</em></span>
+                        <span><img src='/images/repair.png' alt="维修图标" /><em>报修系统</em></span>
                     </div>
                     <div className="repairForm">
                         <h3>请先填写报修表单</h3>
