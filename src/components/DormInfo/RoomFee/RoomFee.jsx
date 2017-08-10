@@ -1,5 +1,5 @@
 import React from 'react';
-import './RoomFee.css';
+import './RoomFee.scss';
 import { Link } from "react-router";
 
 import Loading from '../../PublicComp/Loading/Loading';
@@ -16,7 +16,7 @@ class RoomFee extends React.Component {
 
     render() {
         return (
-            <div className="RoomFee">
+            <div className="roomFee">
                 <div className="roommessage">
                     <h3>电费信息查看</h3>
                     <div className="feeMessage">

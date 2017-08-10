@@ -9,23 +9,7 @@ input,textArea,select{
 #repairMain{
     width:980px;
     margin:0 auto;
-    margin-top: 50px;
-
-    >.repTopbar{
-        height:32px;
-        background: linear-gradient(skyblue,white,skyblue);
-
-        &>span{
-            display: flex;
-            align-items: center;
-
-            &>img{
-                height: 32px;
-                margin-right: 10px;
-            }
-        }
-
-    }
+    margin-top: 42px;
 
     >.repairForm{
         width:100%;

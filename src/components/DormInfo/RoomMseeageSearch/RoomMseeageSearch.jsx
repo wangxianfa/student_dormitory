@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-import './RoomMseeageSearch.css';
+import './RoomMseeageSearch.scss';
 
 
 class RoomMseeageSearch extends React.Component {
@@ -20,7 +20,7 @@ class RoomMseeageSearch extends React.Component {
 
     render() {
         return (
-            <div className="RoomMseeageSearch">
+            <div className="roomMseeageSearch">
                 <div className="roommessage">
                     <h3>宿舍信息查询</h3>
                     <div className="roomfilter">

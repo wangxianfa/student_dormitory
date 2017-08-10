@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+}
+
+#indoorScene{
+
+    >.indoorDetail{
+
+        >.imagesList{
+            padding:0 0 1.2em;
+
+            >span{
+                display: inline-block;
+                width:50%;
+                padding: 2em;
+                box-sizing: border-box;
+
+                &>em{
+                    display: block;
+                    line-height: 25px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-align: center;
+                }
+
+                &>img{
+                    width: 100%;
+                }
+
+            }
+
+        }
+
+        >.evaluate{
+
+            >h3{
+                border-bottom: none;
+                text-align: left;
+                text-indent: 2em;
+            }
+
+            >ol{
+                margin-top: 0;
+
+                &>li{
+                    line-height: 30px;
+                    font-size: 15px;
+                    list-style-type: decimal;
+                }
+
+            }
+
+        }
+
+        >.norecords{
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px; 
+
+            >span{
+                display: inline-block;
+
+                &>img{
+                    width: auto;
+                    height: 300px;
+                }
+
+            }
+
+            >p{
+                margin-top: 30px;
+                color: #f00;
+            }
+
+        }
+
+    }
+
+}

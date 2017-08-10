@@ -1,5 +1,5 @@
 import React from 'react';
-import './IndoorScene.css';
+import './IndoorScene.scss';
 import { ajax } from '../../../../server/ajax.js';
 
 
@@ -74,10 +74,10 @@ class IndoorScene extends React.Component {
             )
         })
         return (
-            <div>
+            <div id='indoorScene'>
                 <div className="InOutDetail indoorDetail">
                     <h3>宿舍内景一览</h3>
-                    <div className="indoorDetail">{imagesList}</div>
+                    <div className="imagesList">{imagesList}</div>
 
                     {
                         records.length >0 ? 

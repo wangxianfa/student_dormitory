@@ -1,0 +1,22 @@
+#nav{
+  width:980px;
+  margin: 20px auto;
+  background:url('/images/bar.png') repeat-x;
+
+  >ul{
+      display: flex;
+      justify-content: flex-start;
+      margin:0;
+
+      &>li, &>a>li{
+          line-height: 45px;
+          margin: 0 12px;
+          padding: 0 10px;
+          cursor: pointer;
+          color: white;
+          font-size: 16px;
+      }
+
+  }
+
+}

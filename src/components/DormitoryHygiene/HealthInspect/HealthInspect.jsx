@@ -1,5 +1,5 @@
 import React from 'react';
-import './HealthInspect.css';
+import './HealthInspect.scss';
 import { Link } from "react-router";
 import { ajax } from '../../../../server/ajax.js';
 
@@ -153,7 +153,7 @@ class HealthInspect extends React.Component {
 
     render() {
 
-        const { dorm, room, healthdetail , pageSize, currentPage, totalPage} = this.state;
+        const { dorm, room, healthdetail , currentPage, totalPage} = this.state;
 
         //console.log(healthdetail)
         const healthdetailList = healthdetail.map((elem, index) => {
