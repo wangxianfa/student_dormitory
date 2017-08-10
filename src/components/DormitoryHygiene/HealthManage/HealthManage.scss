@@ -1,0 +1,33 @@
+#HealthManage{
+    position: relative;
+
+    >.health{
+        width: 980px;
+        min-height: 600px;
+        margin: 0 auto 52px;
+        border: 1px solid lightskyblue;
+        // background-color: red;
+    }
+
+    >.important{
+        width:980px;
+        margin: 40px auto .8em;
+        height:42px;
+        color:red;
+        line-height:42px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+
+        >marquee{
+            width:80%;
+            height:42px;
+            font-size: 18px;
+            line-height:42px;
+            color:red;
+        }
+
+    }
+}
+
+

@@ -1,0 +1,60 @@
+#roomDetail{
+
+    .roommessage{
+
+        >h3{
+            text-align: center;
+            padding: 2.5em 0 1.2em;
+            border-bottom: 1px dashed lightgray;
+            margin-top: 0;
+        }
+
+        >.roomdetail{
+            text-align: center;
+
+            >p{
+                width: 75%;
+                height: 32px;
+                line-height: 24px;
+                text-align: left;
+                margin: 16px auto;
+
+                &>span{
+                    display: inline-block;
+                    margin-right: 1em;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+
+            }
+
+            >p:nth-of-type(1){
+                margin-top: 3em;
+            }
+
+            >span{
+                display: inline-block;
+                margin: 20px;
+
+                >img{
+                    width: 600px;
+                }
+
+                >em{
+                    display: block;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height:24px;
+                }
+
+            }
+
+            >span:nth-last-of-type(1){
+                margin-bottom: 3em;
+            }
+
+        }
+        
+    }
+
+}

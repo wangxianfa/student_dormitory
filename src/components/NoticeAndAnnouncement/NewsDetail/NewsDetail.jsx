@@ -1,5 +1,6 @@
 import React from 'react';
-import './NewsDetail.css';
+import './NewsDetail.scss';
+import '../../../common/styles/NavStyles.scss';
 import { Link } from "react-router";
 
 export default class NewsDetail extends React.Component {
@@ -9,13 +10,13 @@ export default class NewsDetail extends React.Component {
 			"newid" : this.props.location.query.newid
 		},()=>{
 			//发送ajax请求，获得数据
-			const newid = this.state.newid;
+			// const newid = this.state.newid;
 		})
 	}
 
   render() {
     return (
-    	<div>
+    	<div id='newsdetail'>
 			<nav id="nav">
 			    <ul>
 			    	<Link to={{

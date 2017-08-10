@@ -1,0 +1,251 @@
+*{
+    list-style: none;
+}
+
+#home{
+
+    >.container{
+        width:980px;
+        margin:0 auto;
+
+        >.important{
+            height:42px;
+            color:red;
+            line-height:42px;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+
+            >marquee{
+                width:80%;
+                height:42px;
+                font-size: 18px;
+                line-height:42px;
+                color:red;
+            }
+
+        }
+
+        >header{
+            padding-left: 40px;
+            height:200px;
+            margin: 0 auto;
+            background:url('../../../src/images/homeTop.png');
+            background-size: cover;
+            box-shadow:0 0 20px gray;
+            border-radius:5px;
+            box-sizing: border-box;
+            position: relative;
+
+            >.headContent{
+                height:200px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                >.help{
+                    position: absolute;
+                    top: 20px;
+                    right:30px;
+
+                    &>em{
+                        font-style: normal;
+                        display:inline-block;
+                        width:52px;
+                        height:26px;
+                        border:1px solid white;
+                        border-radius:5px;
+                        line-height:26px;
+                        font-size: 15px;
+                        color:white;
+                        text-align: center;
+                        margin-left: 10px;
+                        cursor: pointer;
+                    }
+
+                }
+
+                >span:nth-of-type(1){
+
+                    &>img{
+                        width:120px;
+                        height:120px;
+                        margin-right: 20px;
+                    }
+                    
+                }
+
+                >h1{
+                    margin:0;
+                    font-size: 36px;
+                    font-style: italic;
+                }
+
+            }
+
+        }
+
+        >#homeMain{
+            margin-top: 50px;
+            position: relative;
+
+            >.navTabs{
+                width:240px;
+                border: 3px solid skyblue;
+                padding: 0;
+                border-radius:10px;
+                box-shadow: 0 0 20px lightgray;
+                margin-right: 20px;
+                margin-bottom: 0;
+
+                &>a{
+                    display:block;
+                    list-style: none;
+                    color:#000;
+                    border-bottom: 1px solid skyblue;
+
+                    &>li{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 10px 20px;
+                        font-size: 16px;
+                        line-height: 32px;
+                        border-bottom: 1px solid skyblue;
+                        cursor: pointer;
+
+                        &>span>img{
+                            height:18px;
+                        }
+
+                    }
+
+                    &>li:hover{
+                        color:white;
+                        background:skyblue;
+                    }
+
+                }
+
+                &>a:hover{
+                    text-decoration: none;
+                }
+
+                &>a>li:nth-last-of-type(1){
+                    border-bottom: none;
+                }
+
+            }
+
+            >.pics{
+                width:680px;
+                height: 360px;
+                border:1px solid skyblue;
+                position: absolute;
+                right:0;
+                top:0;
+
+                >span{
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 0;
+
+                    &>img{
+                        width:100%;
+                        height:360px;
+                    }
+
+                }
+            }
+
+        }
+
+        >#bottom{
+            margin-top: 42px;
+            position: relative;
+
+            >.tongZhi, >.news{
+                width:600px;
+                height:240px;
+                border:1px solid skyblue;
+                overflow-y:auto;
+
+                >.tongzhiHead{
+                    height:32px;
+                    background: -webkit-linear-gradient(skyblue,white,skyblue);
+                    background: -o-linear-gradient(skyblue,white,skyblue);
+                    background: -moz-linear-gradient(skyblue,white,skyblue);
+                    background: linear-gradient(skyblue,white,skyblue);
+                    font-size: 14px;
+                    display: flex;
+                    justify-content: space-between;
+                    box-sizing: border-box;
+                    padding:0 10px;
+                    line-height:32px;
+                    margin-bottom: 10px;
+
+                    &>span{
+                        display: flex;
+                        align-items: center;
+
+                        &>img{
+                            height:24px;
+                            margin-right: 6px;
+                        }
+
+                        &>em{
+                            font-style: normal;
+                        }
+
+                    }
+
+                    &>a>span{
+                        cursor: pointer;
+                    }
+
+                }
+
+                >.neirong{
+                    padding:0 20px;
+
+                    >li{
+                        
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 14px;
+                        line-height:32px;
+                        border-bottom: 1px dotted black;
+                        margin-bottom: 4px;
+
+                        &>a{
+                            
+                            color:#000;
+
+                            &>span:nth-of-type(1){
+                                cursor: pointer;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            >.news{
+                width:320px;
+                height:240px;
+                border:1px solid skyblue;
+                position: absolute;
+                top:0;
+                right:0;
+                overflow-y: auto;
+            }
+
+        }
+
+    }
+
+}

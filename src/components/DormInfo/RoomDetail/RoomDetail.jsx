@@ -1,12 +1,11 @@
 import React from 'react';
-import './RoomDetail.css';
-import room from '../../../../src/images/room.png';
+import './RoomDetail.scss';
 
 
 class RoomDetail extends React.Component {
     render() {
         return (
-            <div id="RoomDetail">
+            <div id="roomDetail">
                 <div className="roommessage">
                     <h3>宿舍信息详情</h3>
                     <div className="roomdetail">
@@ -18,8 +17,8 @@ class RoomDetail extends React.Component {
                         <p><span>联系电话：</span><em>12345678901</em></p>
                         <p><span>宿舍口号：</span><em>宿舍口号宿舍口号宿舍口号宿舍口号</em></p>
                         <p><span>宿舍内景：</span></p>
-                        <span><img src={room} alt="宿舍内景" /><em>图(1)</em></span>
-                        <span><img src={room} alt="宿舍内景" /><em>图(2)</em></span>
+                        <span><img src='/images/room.png' alt="宿舍内景" /><em>图(1)</em></span>
+                        <span><img src='/images/room.png' alt="宿舍内景" /><em>图(2)</em></span>
                     </div>
                 </div>
             </div>

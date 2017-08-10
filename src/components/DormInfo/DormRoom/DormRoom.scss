@@ -1,0 +1,45 @@
+.DormRoom{
+    >#roomMain{
+
+        >.roomContent{
+            width: 980px;
+            background: url('/images/roombg.png') repeat;
+            margin: 0 auto;
+            position: relative;
+            min-height:560px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+
+            >.room{
+                width: 100%;
+                min-height:560px;
+            }
+
+            >.light1, >.light2{
+
+                display: inline-block;
+                width:203px;
+                position: absolute;
+                height:100%;
+                top: 0;
+
+            }
+
+            >.light1{
+                background:url('/images/room_1.png') no-repeat;
+                left: -110px;
+            }
+
+            >.light2{
+                background:url('/images/room_2.png') no-repeat;
+                right: -94px;
+            }
+
+        }
+
+    }
+
+
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import './InOut.scss';
+import '../../../common/styles/RepTopbar.scss';
 
 import Header from '../../PublicComp/Header/Header';
 import Footer from '../../PublicComp/Footer/Footer';

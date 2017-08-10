@@ -1,20 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router';
-import './DormRoom.css';
-import stuManage from '../../../../src/images/stuMessage.png';
+import './DormRoom.scss';
 
+import Header from '../../PublicComp/Header/Header';
 import Footer from '../../PublicComp/Footer/Footer';
 
 class DormRoom extends React.Component {
     render() {
         return (
             <div className="DormRoom">
-                <div id="sdhead">
-                    <div className="wrap">
-                        <span><img src={stuManage} alt="学生宿舍管理log" /></span>
-                        <span>学生宿舍管理平台<em>----宿舍信息</em></span>
-                    </div>
-                </div>
+                <Header showSecondLevelMenu='1' secondLevelMenu='宿舍信息' />
                 <div id="roomMain">
                     <nav>
                         <ul>

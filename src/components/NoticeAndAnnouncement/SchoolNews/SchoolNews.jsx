@@ -1,8 +1,9 @@
 import React from 'react';
-import './SchoolNews.css';
+import './SchoolNews.scss';
+import '../../../common/styles/NavStyles.scss';
+import '../../../common/styles/RepTopbar.scss';
 import { Link } from "react-router";
 // import stuManage from '../../../src/images/stuMessage.png';
-import notice from '../../../../src/images/notice.png';
 
 export default class SchoolNews extends React.Component {
 
@@ -72,7 +73,7 @@ export default class SchoolNews extends React.Component {
 	const myselected = selected === 1 ? "学校要闻" : selected === 2 ? "宿舍公告" : selected === 3 ? "学校公告" : "" ;
 
     return (
-    	<div>
+    	<div id='schoolNews'>
 					<nav id="nav">
 							<ul>
 								<li onClick={this.setSelected.bind(this,1)}>学校要闻</li>
@@ -82,9 +83,9 @@ export default class SchoolNews extends React.Component {
 					</nav>
 	      	<div className="health">
 						<div className="repTopbar">
-								<span><img src={notice} alt="通知图标" /><em>>>{myselected}</em></span>
+								<span><img src='/images/notice.png' alt="通知图标" /><em>>>{myselected}</em></span>
 						</div>
-						<div>
+						<div className='contList'>
 							<ul>{newsList}</ul>
 							<div className="topage">
 								<em>&lt;&lt;&lt; {page} &gt;&gt;&gt;</em>

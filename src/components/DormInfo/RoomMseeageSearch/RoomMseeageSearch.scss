@@ -1,0 +1,80 @@
+/* 
+* @Author: anchen
+* @Date:   2017-03-30 19:45:22
+* @Last Modified by:   anchen
+* @Last Modified time: 2017-03-30 19:45:22
+*/
+
+.roomMseeageSearch{
+
+  >.roommessage{
+      width:640px;
+      min-height:520px;
+      margin: 0 auto;
+
+      >h3{
+          text-align: center;
+          padding: 2.5em 0 1.2em;
+          border-bottom: 1px dashed lightgray;
+          margin-top: 0;
+      }
+
+      >.roomfilter{
+          display: flex;
+          justify-content: space-around;
+          margin-top: 52px;
+
+          >p{
+
+            &>select, &>input{
+
+              width:200px;
+              height:30px;
+              box-sizing: border-box;
+              outline:none;
+
+            }
+
+            &>input{
+                text-align: center;
+            }
+
+          }
+
+      }
+
+      >a{
+
+        >.btn{
+            height:30px;
+            display: flex;
+            align-items: center;
+            //border:1px solid skyblue;
+            margin-top: 32px;
+            background: green;
+
+            &>span{
+                display: inline-block;
+                width:15px;
+                height:15px;
+                border: 2px solid #fff;
+                border-radius: 50%;
+                box-sizing: border-box;
+                margin-right: 6px;
+            }
+
+            &>em{
+                display: inline-block;
+                line-height: 16px;
+                font-size: 15px;
+                color:#fff;
+            }
+
+        }
+
+      }
+
+  }
+
+
+}
