@@ -33,8 +33,18 @@
             padding-left: 0;
             padding-right: 0;
 
-            &>li>a>.glyphicon{
-                line-height:32px;
+            &>li{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px dashed #d8d8d8;
+                font-size: 14px;
+                color: #666;
+
+                >a>.glyphicon{
+                    line-height:32px;
+                }
+
             }
 
         }

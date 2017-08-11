@@ -1,4 +1,8 @@
-.DormEmployee{
+em{
+    font-style: normal;
+}
+
+#buildingMsg{
 
     >.breadNav{
         margin-top: 10px;
@@ -51,17 +55,44 @@
 
         }
 
-        >.employeeMsg{
-            >.employeeSearch{
+        >.buildingMain{
+
+            >.buildSearch{
                 margin-top: 32px;
 
-                &>.filter{
+                >.filter{
                     height:52px;
                     font-size: 15px;
                     line-height:32px;
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: space-around;
                     align-items: center;
+
+                    &>.btn{
+                        margin:0;
+                        // width:84px;
+                        padding: 0 8px;
+                        height:30px;
+                        border: 1px solid #21c6cd;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+
+                        &>span{
+                            display: flex;
+                            align-items: center;
+                            margin-right: 4px;
+                            height:18px;
+
+                            img{
+                                height: 18px;
+                            }
+
+                        }
+                    
+                    }
 
                     &>.buildName{
                         display: flex;
@@ -77,58 +108,10 @@
 
                         }
 
-                        &>input{
-                            width: 200px;
-                            height: 30px;
-                            font-size: 14px;
-                            outline: none;
-                            box-sizing: border-box;
-                            padding-left: 4px;
-                        }
-
                     }
 
                 }
 
-                >.position{
-                    margin-top: 20px;
-
-                    >input[type=radio]{
-                        margin-left: 24px;
-                    }
-
-                }
-
-                &>.btn{
-                    margin:30px auto 0;
-                    width:80px;
-                    height:30px;
-                    border: 1px solid #21c6cd;
-                    border-radius: 5px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    cursor: pointer;
-
-                    &>span{
-                        display: flex;
-                        align-items: center;
-                        margin-right: 4px;
-                        height:18px;
-
-                        img{
-                            height: 18px;
-                        }
-
-                    }
-
-                    &>em{
-                        height: 18px;
-                        line-height: 18px;
-                    }
-                
-                }
-                
             }
 
             >.searchResult{
@@ -202,7 +185,7 @@
             }
 
         }
-        
+
     }
 
 }

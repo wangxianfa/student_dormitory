@@ -1,6 +1,28 @@
 .DormRoom{
     >#roomMain{
 
+        >nav{
+            width:980px;
+            margin: 20px auto;
+            background:url('/images/bar.png') repeat-x;
+
+            >ul{
+                display: flex;
+                justify-content: flex-start;
+                margin:0;
+
+                li{
+                    line-height: 45px;
+                    margin: 0 12px;
+                    padding: 0 10px;
+                    cursor: pointer;
+                    color: white;
+                    font-size: 16px;
+                }
+
+            }
+        }
+
         >.roomContent{
             width: 980px;
             background: url('/images/roombg.png') repeat;
