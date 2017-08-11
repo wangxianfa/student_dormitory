@@ -1,0 +1,85 @@
+.clearfix{
+    overflow: hidden;
+    _zoom:1;
+}
+
+.dormDetail{
+
+    >.ddMain{
+        width: 980px;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 52px;
+
+        &>span{
+
+            >img{
+                height:260px;
+                position: absolute;
+                bottom: 0;
+            }
+
+        }
+
+        >.dormintro{
+            width:100%;
+            height:240px;
+            box-sizing: border-box;
+            border-bottom: 2px solid rgba(135,206,235,0.6);
+
+            &>p{
+                padding:.4em 1em 1em;
+                box-sizing: border-box;
+                text-indent: 2em;
+                font-size: 15px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                line-height: 24px;
+
+                &>span:nth-of-type(1){
+                    padding:0 2em 0 1em;
+                }
+
+                &>span:nth-of-type(2){
+                    text-indent: 0;
+                    padding:0 10px;
+
+                    &>img{
+                        height:100px;
+                        position: relative;
+                    }
+
+                }
+
+            }
+
+        }
+
+        >.dormabout{
+            width:540px;
+            min-height:280px;
+            float: right;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border-bottom: 2px solid rgba(135,206,235,0.6);
+            padding-bottom: 1em;
+
+            >p{
+                padding:0 1em;
+            }
+
+        }
+
+        >.dormintro>h3, >.dormabout>h3{
+            box-sizing: border-box;
+            padding: 1em;
+            margin:0;
+            border-bottom: 1px lightgray dashed;
+            font-size: 16px;
+        }
+
+    }
+
+}

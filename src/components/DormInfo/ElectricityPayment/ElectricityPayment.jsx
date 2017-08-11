@@ -1,6 +1,5 @@
 import React from 'react';
-import './ElectricityPayment.css';
-import search from '../../../../src/images/search.png';
+import './ElectricityPayment.scss';
 
 
 export default class ElectricityPayment extends React.Component {
@@ -35,7 +34,7 @@ export default class ElectricityPayment extends React.Component {
 		            <input type="text" placeholder="要查询的条件" />
 		            <span onClick={()=>{
 		            	alert(1)
-		            }}><img src={search} alt="搜索" /></span>
+		            }}><img src='/images/search.png' alt="搜索" /></span>
 		        </p>
 		    </div>
 		    <table>

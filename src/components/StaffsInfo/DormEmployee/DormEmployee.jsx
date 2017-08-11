@@ -46,7 +46,7 @@ class DormEmployee extends React.Component {
                         <span>更多 &gt;&gt;</span>
                     </div>
                     <div className="buildingMain employeeMsg">
-                        <div className="buildSearch employeeSearch">
+                        <div className="employeeSearch">
                             <div className="filter">
                                 <div className="buildName">
                                     <span>按楼栋查询：</span>
@@ -89,14 +89,12 @@ class DormEmployee extends React.Component {
                                 <tbody>{employeeList}</tbody>
                             </table>
                             
-                            <div className="page">
-                                <span data-page="0">首页</span>
-                                <span data-page="0">上一页</span>
-                                <span className="active" data-page="0">1</span>
-                                <span data-page="0">2</span>
-                                <span data-page="0">下一页</span>
-                                <span data-page="0">末页</span>
-                            </div>
+                            <ul className="page">
+                                <li>前一页</li>
+                                <li className="active">1</li>
+                                <li>2</li>
+                                <li>后一页</li>
+                            </ul>
                         </div>
                     </div>
                 </div>

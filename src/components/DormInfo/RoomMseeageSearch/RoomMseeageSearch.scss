@@ -46,12 +46,14 @@
       >a{
 
         >.btn{
+            width: 80px;
             height:30px;
             display: flex;
             align-items: center;
             //border:1px solid skyblue;
-            margin-top: 32px;
             background: green;
+            justify-content: center;
+            margin: 32px auto 0;
 
             &>span{
                 display: inline-block;

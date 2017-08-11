@@ -30,23 +30,24 @@
 
     }
 
+    .page{
+        display: flex;
+        justify-content: center;
+
+        >li{
+            height:36px;
+            border:1px solid lightgray;
+            list-style: none;
+            margin: 0 1em;
+            text-align: center;
+            line-height:36px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            padding:0 1em;
+            cursor: pointer;
+        }
+
+    }
+
 }
 
-#smWrap nav,#roomMain nav{
-    width:980px;
-    margin: 20px auto;
-    background:url('../../../../src/images/bar.png') repeat-x;
-}
-#smWrap>nav>ul,#roomMain>nav>ul{
-    display: flex;
-    justify-content: flex-start;
-    margin:0;
-}
-#smWrap>nav>ul li,#roomMain>nav>ul li{
-    line-height: 45px;
-    margin: 0 12px;
-    padding: 0 10px;
-    cursor: pointer;
-    color: white;
-    font-size: 16px;
-}

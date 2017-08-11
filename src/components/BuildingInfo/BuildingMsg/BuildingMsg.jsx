@@ -1,7 +1,6 @@
 import React from 'react';
-import './BuildingMsg.css';
+import './BuildingMsg.scss';
 import {Link} from 'react-router';
-import search from '../../../../src/images/search.png';
 
 
 class BuildingMsg extends React.Component {
@@ -40,7 +39,7 @@ class BuildingMsg extends React.Component {
         })
 
         return (
-            <div className="BuildingMsg">
+            <div id="buildingMsg">
                 <div className="breadNav">
                     <span>当前位置：</span>
                     <ol>
@@ -67,7 +66,7 @@ class BuildingMsg extends React.Component {
                                     </form>
                                 </div>
                                 <div className="btn">
-                                    <span><img src={search} alt="搜索" /></span>
+                                    <span><img src='/images/search.png' alt="搜索" /></span>
                                     <em>查询</em>
                                 </div>
                             </div>
@@ -86,14 +85,12 @@ class BuildingMsg extends React.Component {
                                 </thead>
                                 <tbody>{buildingMsgList}</tbody>
                             </table>
-                            <div className="page">
-                                <span data-page="0">首页</span>
-                                <span data-page="0">上一页</span>
-                                <span className="active" data-page="0">1</span>
-                                <span data-page="0">2</span>
-                                <span data-page="0">下一页</span>
-                                <span data-page="0">末页</span>
-                            </div>
+                            <ul className="page">
+                                <li>前一页</li>
+                                <li className="active">1</li>
+                                <li>2</li>
+                                <li>后一页</li>
+                            </ul>
                         </div>
                     </div>
                 </div>

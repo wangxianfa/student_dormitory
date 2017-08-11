@@ -1,9 +1,7 @@
 import React from 'react';
-import './DormDetail.css';
-import stuManage from '../../../../src/images/stuMessage.png';
-import build from '../../../../src/images/buildLog.png';
-import room from '../../../../src/images/room.png';
+import './DormDetail.scss';
 
+import Header from '../../PublicComp/Header/Header';
 import Footer from '../../PublicComp/Footer/Footer';
 
 class DormDetail extends React.Component {
@@ -23,20 +21,15 @@ class DormDetail extends React.Component {
     }
     render() {
         return (
-            <div className="DormDetail">
-                <div id="sdhead">
-                    <div className="wrap">
-                        <span><img src={stuManage} alt="学生宿舍管理log" /></span>
-                        <span>学生宿舍管理平台<em>----楼栋详情</em></span>
-                    </div>
-                </div>
+            <div className="dormDetail">
+                <Header showSecondLevelMenu='1' secondLevelMenu='楼栋详情' />
                 <div className="ddMain clearfix">
-                    <span><img src={build} alt="楼栋" /></span>
+                    <span><img src='/images/buildLog.png' alt="楼栋" /></span>
                     <div className="dormintro">
                         <h3>&gt; 楼栋介绍</h3>
                         <p>
                             <span>{this.state.dormIntro}</span>
-                            <span><img src={room} alt="宿舍内况" /></span>
+                            <span><img src='/images/room.png' alt="宿舍内况" /></span>
                         </p>
                     </div>
                     <div className="dormabout">
