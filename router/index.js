@@ -1,16 +1,14 @@
-var fs = require('fs');
+// var fs = require('fs');
 var healthModel = require('../models/healthSchema.js');
 
 exports.showHealth = (req, res) => {
 
-	const page = parseInt(req.query.page);
-	const pageSize = parseInt(req.query.pageSize);
+	const page = parseInt(req.query.page, 10);
+	const pageSize = parseInt(req.query.pageSize, 10);
 	const orderBy = req.query.orderBy;
 	const dorm_filter = req.query.dorm_filter;
 	const room_filter = req.query.room_filter;
 
-
-	res.header('Access-Control-Allow-Origin', "http://localhost:8088");
 
 	healthModel.findall(orderBy, dorm_filter, room_filter, page, pageSize, (err, data) => {
 
