@@ -4,7 +4,7 @@ var indoorSceneModel = require('../models/indoorSceneSchema.js');
 
 exports.showIndoorScene = (req, res) => {
 
-	console.log('1111')
+	// console.log('1111')
 
 	const dorm = Number(req.query.dorm);
 	const room = Number(req.query.room);

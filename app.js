@@ -17,6 +17,7 @@ app.get('/health/fetchroom', router.fetchRorm);
 app.get('/health', router.showHealth);
 app.get('/indoorScene', indoorScene.showIndoorScene);
 app.post('/visitor/saverecords', visitors.saveRecords);
+app.get('/visitor/getrecords', visitors.getRecords);
 
 
 

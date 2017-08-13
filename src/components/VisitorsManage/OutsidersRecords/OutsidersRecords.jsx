@@ -1,48 +1,48 @@
 import React from 'react';
 import './OutsidersRecords.scss';
+import axios from 'axios';
+import serverConfig from '../../../../config/serverConfig.js'
 
 export default class OutsidersRecords extends React.Component {
 
 	constructor(props){
 		super(props);
 		this.state = {
-		    "inOutDetail" : [
-		        {
-		            "vid" : 1,
-		            "visit_name" : "王小军",
-		            "dorm" : "22栋",
-		            "room" : "515",
-		            "stu_name" : "王先发",
-		            "sno" : "201421092075",
-		            "datetime" : "2017-4-1 17:23:45",
-		            "leave" : false,
-		            "leave_datatime" : "2017-4-1 17:23:45"
-		        },
-		        {
-		            "vid" : 2,
-		            "visit_name" : "王小军",
-		            "dorm" : "22栋",
-		            "room" : "515",
-		            "stu_name" : "王先发",
-		            "sno" : "201421092075",
-		            "datetime" : "2017-4-1 17:23:45",
-		            "leave" : true,
-		            "leave_datatime" : "2017-4-1 17:23:45"
-		        },
-		        {
-		            "vid" : 3,
-		            "visit_name" : "王小军",
-		            "dorm" : "22栋",
-		            "room" : "515",
-		            "stu_name" : "王先发",
-		            "sno" : "201421092075",
-		            "datetime" : "2017-4-1 17:23:45",
-		            "leave" : true,
-		            "leave_datatime" : "2017-4-1 17:23:45"
-		        }
-	 		]
- 		}
+			"inOutDetail" : [],
+			"filterdorm": '',
+			'filterroom': '',
+			'orderBy': 'default',
+			'page': 1,
+			'limit': 20
+		};
+		this.getRecords = this.getRecords.bind(this)
 	}
+
+	componentDidMount() {
+		this.getRecords()
+	}
+
+	getRecords () {
+
+		axios({
+			method: 'GET',
+			url: serverConfig.serverType + '://' + serverConfig.host + ':' + serverConfig.port + '/visitor/getrecords',
+			params: {
+				'dorm': this.state.filterdorm,
+				'room': this.state.filterroom,
+				'page': this.state.page,
+				'limit': this.state.limit,
+				'orderBy': this.state.orderBy
+			}
+		}).then((response) => {
+			console.log(response)
+			this.setState({
+				"inOutDetail": response.data
+			})
+		})
+
+	}
+	
 
   render() {
 
@@ -50,14 +50,14 @@ export default class OutsidersRecords extends React.Component {
     const inOutDetailList = inOutDetail.map((elem, index) => {
         return (
             <tr key={index}>
-                <td>{elem.visit_name}</td>
+                <td>{elem.visitor}</td>
                 <td>{elem.dorm}</td>
                 <td>{elem.room}</td>
-                <td>{elem.stu_name}</td>
+                <td>{elem.student}</td>
                 <td>{elem.sno}</td>
-                <td>{elem.datetime}</td>
-                <td>{elem.leave ? "是" : "未离开或未登记"}</td>
-                <td>{elem.leave_datatime}</td>
+                <td>{elem.inTime}</td>
+                <td>{elem.outTime ? "是" : "未离开或未登记"}</td>
+                <td>{elem.outTime || "暂无"}</td>
             </tr>
         );
     })
@@ -68,15 +68,41 @@ export default class OutsidersRecords extends React.Component {
 		    <div className="InoutFilter">
 		        <p>
 		            <span>显示排序：</span>
-		            <select>
-		                <option value="time">------默认------</option>
-		                <option value="time">------按时间------</option>
+		            <select onChange={(e) => {
+						this.setState({
+							'orderBy': e.target.value
+						}, () => {
+							this.getRecords()
+						})	
+					}}>
+		                <option value="default">------默认------</option>
+		                <option value="inTime">------按时间------</option>
+		            </select>
+		        </p>
+		        <p>
+		            <span>宿舍筛选：</span>
+		            <select onChange={(e) => {
+						this.setState({
+							'filterdorm': e.target.value
+						}, () => {
+							this.getRecords()
+						})	
+					}}>
+		                <option value="">------显示所有------</option>
+		                <option value="515">------515------</option>
+		                <option value="123">------123------</option>
 		            </select>
 		        </p>
 		        <p>
 		            <span>楼栋筛选：</span>
-		            <select>
-		                <option value="all">------显示所有------</option>
+		            <select onChange={(e) => {
+						this.setState({
+							'filterroom': e.target.value
+						}, () => {
+							this.getRecords()
+						})	
+					}}>
+		                <option value="">------显示所有------</option>
 		                <option value="in">------22栋------</option>
 		                <option value="out">------21栋------</option>
 		            </select>
