@@ -11,6 +11,11 @@ export default class OutsidersRg extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
+			'visitor': '',
+			'dorm': '-1',
+			'room': '-1',
+			'student': '',
+			'sno': '',
 			'warn' : false
 		};
 		this.saveRecords = this.saveRecords.bind(this);
@@ -20,7 +25,7 @@ export default class OutsidersRg extends React.Component {
 
 		const {visitor, dorm, room, student, sno} = this.state;
 
-		if( visitor && dorm && room && student && sno ){
+		if( visitor && dorm !== '-1' && room !== '-1' && student && sno ){
 
 			axios({
 				method: 'POST',
@@ -35,6 +40,13 @@ export default class OutsidersRg extends React.Component {
 				headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 			}).then((response) => {
 				console.log(response)
+				this.setState({
+					'visitor': '',
+					'dorm': '-1',
+					'room': '-1',
+					'student': '',
+					'sno': ''
+				})
 			})
 
 		} else {
@@ -56,7 +68,7 @@ export default class OutsidersRg extends React.Component {
 	}
 
   render() {
-		const { warn } = this.state;
+		const {visitor, dorm, room, student, sno, warn } = this.state;
 
     return (
         <div className="outsidersRg">
@@ -67,7 +79,7 @@ export default class OutsidersRg extends React.Component {
 					}
         	<p>
         		<span>来访者姓名：</span>
-        		<input onChange={(e) => {
+        		<input value={visitor} onChange={(e) => {
 							this.setState({
 								'visitor': e.target.value
 							})
@@ -75,31 +87,31 @@ export default class OutsidersRg extends React.Component {
         	</p>
         	<p>
         		<span>楼栋：</span>
-        		<select onChange={(e) => {
+        		<select value={dorm} onChange={(e) => {
 							this.setState({
 								'dorm': e.target.value
 							})	
 						}} name="dorm">
-							<option>--------楼栋选择</option>
+							<option value="-1">--------楼栋选择</option>
 							<option value="1">--------1栋</option>
 							<option value="2">--------2栋</option>
         		</select>
         	</p>
         	<p>
         		<span>来访宿舍：</span>
-        		<select onChange={(e) => {
+        		<select value={room} onChange={(e) => {
 							this.setState({
 								'room': e.target.value
 							})	
 						}} name="room">
-							<option>--------宿舍选择</option>
+							<option value="-1">--------宿舍选择</option>
 							<option value="1">--------510</option>
 							<option value="2">--------511</option>
         		</select>
         	</p>
         	<p>
         		<span>学生姓名：</span>
-        		<input onChange={(e) => {
+        		<input value={student} onChange={(e) => {
 							this.setState({
 								'student': e.target.value
 							})	
@@ -107,7 +119,7 @@ export default class OutsidersRg extends React.Component {
         	</p>
         	<p>
         		<span>学生学号：</span>
-        		<input onChange={(e) => {
+        		<input value={sno} onChange={(e) => {
 							this.setState({
 								'sno': e.target.value
 							})	
