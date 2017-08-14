@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import axios from 'axios';
 import serverConfig from '../../../../config/serverConfig.js'
 
+import Success from '../../PublicComp/Success/Success'
 import Warning from '../../PublicComp/Warning/Warning'
 
 export default class OutsidersRg extends React.Component {
@@ -16,7 +17,8 @@ export default class OutsidersRg extends React.Component {
 			'room': '-1',
 			'student': '',
 			'sno': '',
-			'warn' : false
+			'warn' : false,
+			'success': false
 		};
 		this.saveRecords = this.saveRecords.bind(this);
 	}
@@ -46,6 +48,13 @@ export default class OutsidersRg extends React.Component {
 					'room': '-1',
 					'student': '',
 					'sno': ''
+				}, () => {
+					this.setState({'success': true})
+					setTimeout(() => {
+						this.setState({
+							'success': false
+						})
+					}, 3000)
 				})
 			})
 
@@ -68,7 +77,7 @@ export default class OutsidersRg extends React.Component {
 	}
 
   render() {
-		const {visitor, dorm, room, student, sno, warn } = this.state;
+		const {visitor, dorm, room, student, sno, warn, success } = this.state;
 
     return (
         <div className="outsidersRg">
@@ -76,6 +85,10 @@ export default class OutsidersRg extends React.Component {
 					{
 						warn ?
 						<Warning warnmsg='请把信息填写完整...' /> : ''
+					}
+					{
+						success ?
+						<Success successMsg='数据保存成功...' /> : ''
 					}
         	<p>
         		<span>来访者姓名：</span>
@@ -105,8 +118,8 @@ export default class OutsidersRg extends React.Component {
 							})	
 						}} name="room">
 							<option value="-1">--------宿舍选择</option>
-							<option value="1">--------510</option>
-							<option value="2">--------511</option>
+							<option value="510">--------510</option>
+							<option value="511">--------511</option>
         		</select>
         	</p>
         	<p>
