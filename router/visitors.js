@@ -57,6 +57,29 @@ exports.getRecords = (req, res) => {
 
 }
 
+exports.getRoomByDorm = (req, res) => {
+  const dorm = req.query.dorm
+  visitorModel.getRoomByDorm(dorm, (err, data) => {
+    if (err) {
+      res.send('-1')
+      return;
+    }
+
+    res.send(data)
+  })
+}
+
+exports.getDorm = (req, res) => {
+  visitorModel.getDorm((err, data) => {
+    if (err) {
+      res.send('-1')
+      return;
+    }
+
+    res.send(data)
+  })
+}
+
 function convertDate () {
   //  时间戳是整数，否则要parseInt转换
   var time = new Date()
