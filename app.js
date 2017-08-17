@@ -6,20 +6,26 @@ const router = require('./router/index.js');
 const indoorScene = require('./router/indoorScene.js');
 const db = require('./models/db.js');
 const visitors = require('./router/visitors')
+const inout = require('./router/inout')
 
 app.all('*', (req, res, next) => {
-		res.header('Access-Control-Allow-Origin', "http://localhost:8088");
+		res.header('Access-Control-Allow-Origin', "*");
 		next();
 })
 
 app.get('/health/fetchdorm', router.fetchDorm);
 app.get('/health/fetchroom', router.fetchRorm);
 app.get('/health', router.showHealth);
+
+// 访客管理
 app.get('/indoorScene', indoorScene.showIndoorScene);
 app.post('/visitor/saverecords', visitors.saveRecords);
 app.get('/visitor/getrecords', visitors.getRecords);
 app.get('/visitor/getdorm', visitors.getDorm);
 app.get('/visitor/getroombydorm', visitors.getRoomByDorm);
+
+// 出入管理
+app.post('/inout/saveinoutrecord',inout.saveInOutRecords);
 
 
 
