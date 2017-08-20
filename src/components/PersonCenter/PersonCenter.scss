@@ -1,0 +1,58 @@
+#personCenter{
+
+  >.topbar{
+    width: 1000px;
+    height: 30px;
+    background-color: #fff;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    >.topl{
+      &>span{
+        margin-right: 20px;
+        font-size: 14px;
+        color: #333;
+        line-height: 30px;
+        cursor: pointer;
+      }
+      &>span:nth-of-type(1){
+        color: #f00;
+        font-weight: bold;
+      }
+    }
+
+    >.topr{
+      line-height: 30px;
+
+      ul, li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li{
+        display: inline-block;
+        margin-left: 20px;
+        font-size: 14px;
+        color: #333;
+        cursor: pointer;
+
+        i{
+          margin-right: 2px;
+          color: #333;
+        }
+
+      }
+
+    }
+
+  }
+
+  .personalHead{
+    width: 100%;
+    height: 98px;
+    background-color: #dfdfdf;
+  }
+
+}
