@@ -14,9 +14,7 @@ class InOut extends React.Component {
                     <div className="repTopbar">
                         <span><img src='/images/repair.png' alt="维修图标" /><em>物品出入管理</em></span>
                     </div>
-                    <div>
-                        {this.props.children}
-                    </div>
+                    {this.props.children}
                 </div>
                 <Footer />
             </div>
