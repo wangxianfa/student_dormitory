@@ -11,25 +11,18 @@ exports.saveInOutRecords = (req, res) => {
 
   req.on('end', () => {
 
-    const { student, sno, itemName, dorm, inORout, message } = body
+    const { student, sno, itemName, dorm, inORout, message } = JSON.parse(body)
 
-    if (student && sno && itemName && dorm && inORout) {
+    inoutModel.saveInOutRecords(student, sno, itemName, dorm, inORout, message, (err, data) => {
+      if (err) {
+        res.send('-1')
+        return;
+      }
 
-      inoutModel.saveInOutRecords(student, sno, itemName, dorm, inORout, message, (err, data) => {
-        if (err) {
-          res.send('-1')
-          return;
-        }
+      // console.log(data)
+      res.send('1')
 
-        console.log(data)
-        res.send(data)
-
-      })
-
-    } 
-    else {
-      res.send('数据格式错误！')
-    }
+    })
 
   })
 
