@@ -1,12 +1,14 @@
 #personCenter{
+  background-color: #f8f8f8;
 
   >.topbar{
     width: 1000px;
-    height: 30px;
-    background-color: #fff;
+    height: 45px;
+    background-color: transparent;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     >.topl{
       &>span{
@@ -15,6 +17,15 @@
         color: #333;
         line-height: 30px;
         cursor: pointer;
+
+        i{
+          font-size: 14px;
+          margin-left: 4px;
+        }
+
+      }
+      &>.sign_out:hover{
+        font-weight: bold;
       }
       &>span:nth-of-type(1){
         color: #f00;
@@ -49,10 +60,105 @@
 
   }
 
-  .personalHead{
+  >.personalHead{
     width: 100%;
-    height: 98px;
-    background-color: #dfdfdf;
+    height: 160px;
+    background: url('/images/navbg.png') repeat-x;
+    // background-size: cover;
+    .head_wrap{
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      >span:nth-of-type(1){
+          height:160px;
+          display: flex;
+          align-items: center;
+          margin-left: 50px;
+
+          >img{
+              height:120px;
+          }
+
+      }
+
+      >span:nth-of-type(2){
+        display: inline-flex;
+        align-items: center;
+        margin: auto auto 52px;
+
+        &>input{
+          width: 440px;
+          height: 40px;
+          color: #666;
+          outline: none;
+          border: 1px solid #999;
+          box-sizing: border-box;
+          text-indent: 6px;
+        }
+
+        &>em{
+          font-size: 14px;
+          color: #666;
+          line-height: 40px;
+          display: inline-block;
+          margin-left: 16px;
+          border: 1px solid #999;
+          padding: 0 15px;
+          height: 40px;
+          box-sizing: border-box;
+          background-color: #fff;
+          text-align: center;
+          cursor: pointer;
+          min-width: 80px;
+        }
+
+      }
+
+    }
+
+  }
+
+  >.contwrap{
+    width: 86%;
+    margin: 32px auto 0;
+
+    >h3{
+      font-size: 14px;
+      color: #333;
+      line-height: 24px;
+      font-weight: normal;
+      margin-bottom: 26px;
+
+      &>em{
+        font-weight: bold;
+      }
+
+    }
+
+    >.main{
+      border: 1px solid #dfdfdf;
+      display: flex;
+
+      >.wrap_l{
+
+        width: 320px;
+        min-height: 500px;
+        background-color: #fff;
+        margin-right: 50px;
+
+      }
+
+      >.wrap_r{
+        width: calc(100% - 370px);
+        min-height: 500px;
+        background-color: #fff;
+      }
+
+    }
+
   }
 
 }
