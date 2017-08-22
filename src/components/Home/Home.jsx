@@ -80,9 +80,9 @@ class Home extends React.Component {
                     </header>
                     <div id="homeMain">
                         <ul className="navTabs">
-                            <Link to="/">
-                                <li>首页 <span><img src='/images/arrow_right.png' alt="右箭头" /></span></li>
-                            </Link>
+                            {/* <Link to="/studentDormitory">
+                                <li>主页 <span><img src='/images/arrow_right.png' alt="右箭头" /></span></li>
+                            </Link> */}
                             <Link to='/studentDormitory'>
                                 <li>学生宿舍信息管理 <span><img src='/images/arrow_right.png' alt="右箭头" /></span></li>
                             </Link>
