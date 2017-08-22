@@ -3,7 +3,7 @@
 }
 #Login{
     height: 100%;
-    background: url('../../../../src/images/loginbg.png');
+    background: url('/images/loginbg.png');
     background-size: cover;
     display: flex;
     align-items: center;
@@ -32,7 +32,7 @@
             margin: 24px 0;
             padding-left: 60px;
             box-sizing: border-box;
-            background:url('../../../../src/images/input_icons.png');
+            background:url('/images/input_icons.png');
 
             &>input{
                 width:100%;
@@ -51,7 +51,7 @@
         }
 
         >label:nth-of-type(2){
-            background:url('../../../../src/images/input_icons.png') 10px -50px no-repeat;
+            background:url('/images/input_icons.png') 10px -50px no-repeat;
         }
 
         >p{

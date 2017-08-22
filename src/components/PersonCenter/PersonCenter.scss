@@ -115,6 +115,11 @@
           min-width: 80px;
         }
 
+        &>em:hover{
+          font-weight: bold;
+          background-color: #f8f8f8;
+        }
+
       }
 
     }
@@ -122,8 +127,9 @@
   }
 
   >.contwrap{
-    width: 86%;
-    margin: 32px auto 0;
+    width: 80%;
+    max-width: 1100px;
+    margin: 32px auto 50px;
 
     >h3{
       font-size: 14px;
@@ -144,10 +150,80 @@
 
       >.wrap_l{
 
-        width: 320px;
+        width: 310px;
         min-height: 500px;
-        background-color: #fff;
-        margin-right: 50px;
+        background-color: rgba(4, 18, 27, 0.88);
+        margin-right: 60px;
+        padding: 20px 0 0;
+
+        >.picwrap{
+          text-align: center;
+          margin: 24px 0;
+
+          &>span{
+            display: inline-block;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            &>img{
+              height: 72px;
+              border-radius: 50%;
+            }
+          }
+
+          &>p{
+            font-size: 15px;
+            color: #3385ff;
+            margin-top: 20px;
+          }
+
+        }
+
+        >ul{
+          margin: 15px 0;
+          padding: 0;
+          list-style: none;
+
+          &>li{
+            line-height: 25px;
+            list-style: none;
+            padding: 8px 0;
+            margin: 8px 0;
+            box-sizing: border-box;
+            cursor: pointer;
+
+            &>i{
+              font-size: 16px;
+              color: skyblue;
+              margin-right: 6px;
+              margin-left: 3em;
+            }
+
+            &>span{
+              font-size: 16px;
+              color: #fff;
+
+              &>em{
+                display: inline-block;
+                color: #f00;
+                font-size: 13px;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color: #fff;
+                line-height: 16px;
+                text-align: center;
+                font-weight: bold;
+                margin-left: 8px;
+              }
+
+            }
+          }
+
+          &>li:hover{
+            background-color: rgba(1, 11, 16, 0.88);
+          }
+
+        }
 
       }
 
@@ -155,6 +231,80 @@
         width: calc(100% - 370px);
         min-height: 500px;
         background-color: #fff;
+        padding-bottom: 50px;
+
+        >.tab{
+          height: 40px;
+          font-size: 0;
+          background-color: #f8f8f8;
+
+          &>span{
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #dfdfdf;
+            box-sizing: border-box;
+            cursor: pointer;
+          }
+          &>.active{
+            background-color: #3385ff;
+            color: #fff;
+          }
+          &>span:nth-of-type(1){
+            border-right: none;
+          }
+        }
+
+        >.messageCont{
+          margin-top: 50px;
+
+          &>p{
+            margin: 20px auto;
+            font-size: 15px;
+            color: #333;
+            line-height: 24px;
+            &>span:nth-of-type(1) {
+              display: inline-block;
+              margin-left: 20%;
+              margin-right: 8px;
+            }
+
+            &>.editable{
+              height: 32px;
+              line-height: 32px;
+              background-color: #f8f8f8;
+              border: 1px solid #dfdfdf;
+              display: inline-block;
+              min-width: 240px;
+              text-indent: 8px;
+              color: #999;
+            }
+
+          }
+
+          &>.saveModify{
+            text-align: center;
+            margin-top: 50px;
+
+            &>button{
+              width: 240px;
+              height: 36px;
+              box-sizing: border-box;
+              font-size: 15px;
+              color: #fff;
+              margin: 0 auto;
+              background-color: #3385ff;
+              border: none;
+              cursor: pointer;
+            }
+          }
+
+        }
+
       }
 
     }
