@@ -259,48 +259,100 @@
           }
         }
 
-        >.messageCont{
-          margin-top: 50px;
+        >.r_main{
 
-          &>p{
-            margin: 20px auto;
-            font-size: 15px;
-            color: #333;
-            line-height: 24px;
-            &>span:nth-of-type(1) {
-              display: inline-block;
-              margin-left: 20%;
-              margin-right: 8px;
+          height: 100%;
+          display: flex;
+          align-items: center;
+
+          >.messageCont, >.changePsw{
+            width: 100%;
+            padding: 40px 0;
+
+            &>p:nth-of-type(1) {
+              margin-top: 0;
             }
 
-            &>.editable{
-              height: 32px;
-              line-height: 32px;
-              background-color: #f8f8f8;
-              border: 1px solid #dfdfdf;
-              display: inline-block;
-              min-width: 240px;
-              text-indent: 8px;
-              color: #999;
+            &>p:nth-last-of-type(1) {
+              margin-bottom: 0;
+            }
+
+            &>p{
+              margin: 20px auto;
+              font-size: 15px;
+              color: #333;
+              line-height: 24px;
+              &>span:nth-of-type(1) {
+                display: inline-block;
+                margin-left: 20%;
+                margin-right: 8px;
+              }
+
+              &>.editable{
+                height: 32px;
+                line-height: 32px;
+                background-color: #f8f8f8;
+                border: 1px solid #dfdfdf;
+                display: inline-block;
+                min-width: 240px;
+                text-indent: 8px;
+                color: #999;
+              }
+
+            }
+
+            &>.saveModify{
+              text-align: center;
+              margin-top: 50px;
+
+              &>button{
+                width: 240px;
+                height: 36px;
+                box-sizing: border-box;
+                font-size: 15px;
+                color: #fff;
+                margin: 0 auto;
+                background-color: #3385ff;
+                border: none;
+                cursor: pointer;
+              }
             }
 
           }
 
-          &>.saveModify{
-            text-align: center;
-            margin-top: 50px;
+          >.changePsw{
 
-            &>button{
-              width: 240px;
-              height: 36px;
-              box-sizing: border-box;
-              font-size: 15px;
-              color: #fff;
-              margin: 0 auto;
-              background-color: #3385ff;
-              border: none;
-              cursor: pointer;
+            &>p{
+
+              &>span:nth-of-type(1) {
+                min-width: 80px;
+              }
+
+              &>span{
+                &>input{
+                  height: 32px;
+                  line-height: 32px;
+                  border: 1px solid #dfdfdf;
+                  min-width: 240px;
+                  text-indent: 8px;
+                  color: #999;
+                }
+              }
+
             }
+
+
+            &>.saveModify{
+              &>button{
+                width: 120px;
+                margin: 0 15px;
+              }
+
+              &>button:nth-of-type(2) {
+                background-color: lightgreen;
+              }
+            }
+
           }
 
         }

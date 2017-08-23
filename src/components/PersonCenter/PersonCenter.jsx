@@ -6,8 +6,17 @@ import Footer from '../PublicComp/Footer/Footer';
 
 
 class PersonCenter extends React.Component {
+    constructor (props) {
+        super(props);
+        this.state = {
+            'showIndex' : 1
+        }
+    }
 
   render() {
+
+    const { showIndex } = this.state;
+
     return (
        <div id="personCenter">
            <div className="topbar">
@@ -45,19 +54,41 @@ class PersonCenter extends React.Component {
                     </article>
                     <article className='wrap_r'>
                         <div className="tab">
-                            <span className='active'>个人信息</span>
-                            <span>密码修改</span>
+                            <span onClick={() => {
+                                    this.setState({
+                                        'showIndex': 1
+                                    })
+                                }} className={showIndex === 1 ? 'active' : ''}>个人信息</span>
+                            <span onClick={() => {
+                                    this.setState({
+                                        'showIndex': 2
+                                    })
+                                }} className={showIndex === 2 ? 'active' : ''}>密码修改</span>
                         </div>
-                        <div className="messageCont">
-                            <p><span>学生姓名：</span><span>王先发</span></p>
-                            <p><span>学生学号：</span><span>201421092075</span></p>
-                            <p><span>学生性别：</span><span>男</span></p>
-                            <p><span>所在专业：</span><span>信息工程</span></p>
-                            <p><span>所在年级：</span><span>2014级</span></p>
-                            <p><span>所在宿舍：</span><span>22栋515</span></p>
-                            <p><span>联系电话：</span><span className='editable'>13345678901</span></p>
-                            <p><span>email：</span><span className='editable'>1270386187@qq.com</span></p>
-                            <p className='saveModify'><button>保存修改</button></p>
+                        <div className="r_main">
+                            {
+                                showIndex === 1 ?
+                                <div className="messageCont">
+                                    <p><span>学生姓名：</span><span>王先发</span></p>
+                                    <p><span>学生学号：</span><span>201421092075</span></p>
+                                    <p><span>学生性别：</span><span>男</span></p>
+                                    <p><span>所在专业：</span><span>信息工程</span></p>
+                                    <p><span>所在年级：</span><span>2014级</span></p>
+                                    <p><span>所在宿舍：</span><span>22栋515</span></p>
+                                    <p><span>联系电话：</span><span className='editable'>13345678901</span></p>
+                                    <p><span>email：</span><span className='editable'>1270386187@qq.com</span></p>
+                                    <p className='saveModify'><button>保存修改</button></p>
+                                </div> : ''
+                            }
+                            {
+                                showIndex === 2 ?
+                                <div className="changePsw">
+                                    <p><span>原密码：</span><span className='editable'>201421092075</span></p>
+                                    <p><span>新密码：</span><span><input type="text" /></span></p>
+                                    <p><span>密码确认：</span><span><input type="text" /></span></p>
+                                    <p className='saveModify'><button>确认修改</button><button>取消</button></p>
+                                </div> : ''
+                            }
                         </div>
                     </article>
                 </div>
