@@ -4,6 +4,7 @@ import {Link} from 'react-router';
 
 import Header from '../PublicComp/Header/Header';
 import Footer from '../PublicComp/Footer/Footer';
+import QrImage from '../PublicComp/QrImage/QrImage';
 
 class StudentDormitory extends React.Component {
     render() {
@@ -33,9 +34,8 @@ class StudentDormitory extends React.Component {
                                 <p>保卫处电话：027-25486897</p>
                                 <p>校医院电话：027-25486897</p>
                                 <p>
-                                    <em>学校官方宿舍管理微信：</em>
-                                    <span><img src='/images/二维码.png' alt="二维码" /></span>
-                                    <em>扫码关注</em>
+                                    <em>学校官方宿舍管理官方群：</em>
+                                    <QrImage />
                                 </p>
                             </div>
                         </div>
