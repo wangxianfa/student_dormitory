@@ -10,14 +10,14 @@ a,a:hover,a:active,a:visited{
         height:auto;
         margin:20px auto;
         padding:0;
-        
+
         >#sdTop{
             position: relative;
 
             >.left{
                 width:320px;
                 float: left;
-                
+
                 >.login{
                     width:320px;
                     height:100%;
@@ -151,6 +151,18 @@ a,a:hover,a:active,a:visited{
 
                     >p:nth-last-of-type(1){
                         text-align: center;
+                        &>span{
+                            display: inline-block;
+                            height: 110px;
+                            width: 100%;
+                            text-align: left;
+
+                            &>svg{
+                                width: 110px;
+                                height: 100%;
+                            }
+
+                        }
                     }
 
                 }
@@ -196,7 +208,7 @@ a,a:hover,a:active,a:visited{
                     position:relative;
                     border:none;
                     padding:10px 10px 10px 10px;
-                    
+
                     >span{
 
                         display: inline-block;
