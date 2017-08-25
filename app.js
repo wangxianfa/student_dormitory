@@ -7,6 +7,7 @@ const indoorScene = require('./router/indoorScene.js');
 const db = require('./models/db.js');
 const visitors = require('./router/visitors')
 const inout = require('./router/inout')
+const login = require('./router/login')
 
 app.all('*', (req, res, next) => {
 		res.header('Access-Control-Allow-Origin', "*");
@@ -26,6 +27,9 @@ app.get('/visitor/getroombydorm', visitors.getRoomByDorm);
 
 // 出入管理
 app.post('/inout/saveinoutrecord',inout.saveInOutRecords);
+
+// 登录
+app.post('/login', login.doLogin);
 
 
 

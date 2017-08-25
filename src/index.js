@@ -141,7 +141,7 @@ ReactDOM.render((
         </Route>
         <Route path='login' component={Login} />
         {/* onEnter={requireCredentials} */}
-        <Route path='personcenter' component={PersonCenter} />
+        <Route path='personcenter' component={PersonCenter} onEnter={requireCredentials} />
         <Route path='announcement' component={Announcement} >
             <IndexRoute component={SchoolNews} />
             <Route path="schoolNews" component={SchoolNews} />
