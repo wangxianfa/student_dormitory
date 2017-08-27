@@ -32,7 +32,7 @@ class Login extends React.Component {
                 method: 'POST',
                 url: serverConfig.serverType + '://' + serverConfig.host + ':' + serverConfig.port + '/login',
                 data: {
-                    sno: this.state.stu_no,
+                    username: this.state.stu_no,
                     password: this.state.password
                 },
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'}
