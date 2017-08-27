@@ -1,13 +1,16 @@
-const express = require('express');
-const app = express();
-const serverConfig = require('./config/serverConfig');
+const express = require('express')
+const app = express()
+const bodyParser = require('body-parser')
+const serverConfig = require('./config/serverConfig')
 
-const router = require('./router/index.js');
-const indoorScene = require('./router/indoorScene.js');
-const db = require('./models/db.js');
+const router = require('./router/index.js')
+const indoorScene = require('./router/indoorScene.js')
 const visitors = require('./router/visitors')
 const inout = require('./router/inout')
 const login = require('./router/login')
+
+// app.use(bodyParser.json({ limit: '1mb' }))
+// app.use(bodyParser.urlencoded({ extended: false }))
 
 app.all('*', (req, res, next) => {
 		res.header('Access-Control-Allow-Origin', "*");

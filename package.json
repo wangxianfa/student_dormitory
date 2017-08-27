@@ -44,8 +44,10 @@
     "http-proxy-middleware": "0.17.3",
     "jest": "18.1.0",
     "json-loader": "0.5.4",
+    "jsonwebtoken": "^7.4.3",
     "mongoose": "^4.11.1",
     "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0",
     "object-assign": "4.1.1",
     "postcss-loader": "1.2.2",
     "promise": "7.1.1",
@@ -65,7 +67,7 @@
     "dev": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "start": "node ./app.js"
+    "start": "nodemon ./app.js"
   },
   "jest": {
     "collectCoverageFrom": [
