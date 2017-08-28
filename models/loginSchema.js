@@ -14,12 +14,12 @@ var loginSchema = new mongoose.Schema({
   token: {
     type: String
   }
-}, {collection: 'user'})
+}, {collection: 'users'})
 
 loginSchema.statics.vertifyCont = (username, password) => {
   console.log(username, password)
 }
 
-var loginModel = db.model('mongoose', loginSchema, 'user')
+var loginModel = db.model('mongoose', loginSchema, 'users')
 
 module.exports = loginModel;
