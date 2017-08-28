@@ -73,6 +73,9 @@ import OutsidersRecords from './components/VisitorsManage/OutsidersRecords/Outsi
 //个人中心
 import PersonCenter from './components/PersonCenter/PersonCenter';
 
+// 没有权限访问
+import NoPermission from './components/PublicComp/No_Permission/No_Permission';
+
 
 //引入子路由
 
@@ -152,5 +155,6 @@ ReactDOM.render((
             <Route path="outsidersRg" component={OutsidersRg} />
             <Route path="outsidersRecords" component={OutsidersRecords} />
         </Route>
+        <Route path='nopermission' component={NoPermission} />
     </Router>
 ), document.getElementById('root'));
