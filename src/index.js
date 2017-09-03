@@ -85,12 +85,12 @@ import NoPermission from './components/PublicComp/No_Permission/No_Permission';
 function requireCredentials(nextState, replace, next) {
     console.log("路由权限控制");
     console.log(nextState)
-    if (false) {
+    if (sessionStorage.getItem('token')) {
         fetch("")
             .then(
                 () => next(), //通过next()成功跳转
                 () => {
-                    replace('/home') //重定向
+                    replace(nextState.location.pathname) //重定向
                     next()
                 }
             )
@@ -122,10 +122,10 @@ ReactDOM.render((
         <Route path='studentMsg' component={StudentMsg}>
             <IndexRoute component={StudentMsgSearch} />
             <Route path="checkManage" component={CheckManage} />
-            <Route path="lateManage" component={LateManage} />
+            <Route path="lateManage" component={LateManage} onEnter={requireCredentials} />
             <Route path="stumsgSearch" component={StudentMsgSearch} />
-            <Route path="addstuMsg" component={AddStudentMsg} />
-            <Route path="addcheckinMsg" component={AddCheckinMsg} />
+            <Route path="addstuMsg" component={AddStudentMsg} onEnter={requireCredentials} />
+            <Route path="addcheckinMsg" component={AddCheckinMsg} onEnter={requireCredentials} />
             <Route path="lateRg" component={LateRegistration} />
             <Route path="stusFilter" component={StudentsFilter} />
             <Route path="StuDormMsg" component={StudentDormMsg} />
@@ -151,7 +151,7 @@ ReactDOM.render((
             <Route path="newsDetail" component={NewsDetail} />
         </Route>
         <Route path="outsiders" component={OutsidersVisit}>
-            <IndexRoute component={OutsidersRg} />
+            <IndexRoute component={OutsidersRg} onEnter={requireCredentials} />
             <Route path="outsidersRg" component={OutsidersRg} />
             <Route path="outsidersRecords" component={OutsidersRecords} />
         </Route>

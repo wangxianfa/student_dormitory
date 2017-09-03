@@ -16,8 +16,13 @@ var loginSchema = new mongoose.Schema({
   }
 }, {collection: 'users'})
 
-loginSchema.statics.vertifyCont = (username, password) => {
-  console.log(username, password)
+loginSchema.statics.vertifyCont = (username, password, callback) => {
+  const condition = {
+    'nickname': username,
+    'password': password
+  }
+
+  return loginModel.find(condition).exec(callback)
 }
 
 var loginModel = db.model('mongoose', loginSchema, 'users')

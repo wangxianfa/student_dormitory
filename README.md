@@ -2,24 +2,4 @@
 
 ### 用户权限管理
 
-> jwt + koa + mongodb + node 实现安全认证
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+> jwt + koa + mongodb + node 实现安全认证markdownlint
