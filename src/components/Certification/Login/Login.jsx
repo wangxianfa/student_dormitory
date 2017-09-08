@@ -30,22 +30,20 @@ class Login extends React.Component {
             })
         } else {
 
-            axios({
-                method: 'POST',
-                url: serverConfig.serverType + '://' + serverConfig.host + ':' + serverConfig.port + '/login',
-                data: {
-                    username: this.state.stu_no,
-                    password: this.state.password
-                },
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                }
-            }).then((response) => {
+            axios.post(serverConfig.serverType + '://' + serverConfig.host + ':' + serverConfig.port + '/login', {
+                    'username': this.state.stu_no,
+                    'password': this.state.password
+                }).then((response) => {
                 console.log(response)
-                sessionStorage.setItem('token', JSON.parse(JSON.stringify(response.data)).content)
-                browserHistory.push({
-                    'pathname': '/'
-                })
+
+                if (JSON.parse(JSON.stringify(response.data)).content) {
+                    sessionStorage.setItem('token', JSON.parse(JSON.stringify(response.data)).content)
+                    browserHistory.push({
+                        'pathname': '/'
+                    })
+                } else {
+                    alert('验证失败')
+                }
             })
 
         }

@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const serverConfig = require('./config/serverConfig')
+const expressJwt = require('express-jwt')
+const tokenConfig = require('./config/configurable/token')
 
 const router = require('./router/index.js')
 const indoorScene = require('./router/indoorScene.js')
@@ -9,12 +11,21 @@ const visitors = require('./router/visitors')
 const inout = require('./router/inout')
 const login = require('./router/login')
 
-// app.use(bodyParser.json({ limit: '1mb' }))
-// app.use(bodyParser.urlencoded({ extended: false }))
+const vertifyIgnore = ['/login', '/health', '/health/fetchdorm', '/health/fetchroom'];
+
+app.use(bodyParser.json({ limit: '1mb' }))
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(expressJwt({secret:'wangxianfa vertify'}).unless({path: vertifyIgnore}))
+
+app.use((err ,req, res, next) => {
+	if (err.name === "UnauthorizedError") {
+    res.status(401).send("invalid token");
+  }
+})
 
 app.all('*', (req, res, next) => {
 		res.header('Access-Control-Allow-Origin', "*");
-		res.header("Access-Control-Allow-Headers", "Authorization");
+		res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
 		next();
 })
 
