@@ -4,4 +4,4 @@
 
 ### 用户权限管理
 
-> jwt + expressJwt + mongodb + node 实现安全认证及等级权限认证
+> jwt + expressJwt + mongodb + node 实现安全认证 + 权限等级认证
