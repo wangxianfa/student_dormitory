@@ -4,8 +4,7 @@ const token = require('../config/configurable/token')
 
 exports.doLogin = (req, res) => {
 
-  // console.log(req.body)
-  // res.send('1')
+  console.log(req.headers)
 
   var reqBody = ''
   req.on('data', (chunk) => {

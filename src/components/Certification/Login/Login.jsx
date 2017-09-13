@@ -38,14 +38,17 @@ class Login extends React.Component {
                     password: this.state.password
                 },
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Authorization': 'Bearer 123'
                 }
             }).then((response) => {
                 console.log(response)
-                sessionStorage.setItem('token', JSON.parse(JSON.stringify(response.data)).content)
-                browserHistory.push({
-                    'pathname': '/'
-                })
+                if (JSON.parse(JSON.stringify(response.data)).code === 'S01') {
+                    sessionStorage.setItem('token', JSON.parse(JSON.stringify(response.data)).content)
+                    browserHistory.push({
+                        'pathname': '/'
+                    })
+                }
             })
 
         }
