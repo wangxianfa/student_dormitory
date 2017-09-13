@@ -67,7 +67,7 @@
     "dev": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "start": "nodemon ./app.js"
+    "start": "nodemon ./app.js --harmony"
   },
   "jest": {
     "collectCoverageFrom": [
