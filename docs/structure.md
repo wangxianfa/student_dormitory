@@ -1,6 +1,7 @@
 # 项目结构说明
 
 - `config/` 配置文件
+  - `configurable/`  可配置文件目录
   - `serverConfig`  服务启动配置
   - `sbServer`  mongodb连接配置
 
@@ -17,3 +18,5 @@
 - `src/`  项目源文件目录
 
 - `app.js`  服务入口文件
+
+- `nodemon.json`  nodemon配置文件
