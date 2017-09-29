@@ -22,7 +22,7 @@ class No_Permission extends Component {
     return (
       <div id='no_permission'>
         <div className="permission_wrap">
-          {/* <span><img src="/icons/no_permission.png" alt="no permission" /></span> */}
+          <span><object data="/icons/403.svg" type="image/svg+xml"></object></span>
           <p>对不起，你没有权限访问该页面，<span>{left_seconds}S</span>后自动返回</p>
         </div>
       </div>
