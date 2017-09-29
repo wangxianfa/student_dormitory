@@ -5,15 +5,19 @@
   justify-content: center;
 
   >.permission_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     >span{
       display: inline-block;
-      &>img{
-        width: 666px;
+      &>object{
+        width: 600px;
       }
     }
 
     >p{
-      font-size: 16px;
+      font-size: 24px;
       color: #666;
       text-align: center;
       &>span{
