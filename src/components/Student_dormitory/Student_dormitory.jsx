@@ -53,9 +53,9 @@ class StudentDormitory extends React.Component {
                                 <Link  activeClassName="active" to="/dormRoom">
                                     <li>宿舍信息</li>
                                 </Link>
-                                <Link  activeClassName="active" to="/studentDormitory/dormEmployee">
+                                {/* <Link  activeClassName="active" to="/studentDormitory/dormEmployee">
                                     <li>员工信息</li>
-                                </Link>
+                                </Link> */}
                                 <Link  activeClassName="active" to="/studentDormitory/buildingMsg">
                                     <li>楼栋信息</li>
                                 </Link>
