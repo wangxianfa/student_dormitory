@@ -22,21 +22,17 @@ class CheckManage extends React.Component {
                                 <option value="1">2014级</option>
                                 <option value="2">2015级</option>
                             </select></span>
-                            <Link to={{
-                                "pathname" : "/studentMsg/StuDormMsg",
-                                "query" : {}
-                            }}>
-                                <span className="btn">
-                                    <span><img src='/images/search.png' alt="搜索" /></span>
-                                    <em>查询</em>
-                                </span>
-                            </Link>
                         </p>
                     </div>
-                    <p>
-                        <Link to="/StudentMsg/addcheckinMsg">
-                            <span><img src='/images/edit.png' alt="学生宿舍管理log" /></span>
-                            <em>添加入住信息</em>
+                    <p>    
+                        <Link to={{
+                            "pathname" : "/studentMsg/StuDormMsg",
+                            "query" : {}
+                        }}>
+                            <span className="btn">
+                                <span><img src='/images/search.png' alt="搜索" /></span>
+                                <em>查询</em>
+                            </span>
                         </Link>
                     </p>
                 </div>

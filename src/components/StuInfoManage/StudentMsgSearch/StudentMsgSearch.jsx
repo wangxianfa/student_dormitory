@@ -22,21 +22,17 @@ class StudentMsgSearch extends React.Component {
                                     <option value="1">2014级</option>
                                     <option value="2">2015级</option>
                                 </select></span>
-                                <Link to={{
-                                    "pathname" : "/studentMsg/stusFilter",
-                                    "query" : {}
-                                }}>
-                                    <span className="btn">
-                                        <span><img src='/images/search.png' alt="搜索" /></span>
-                                        <em>查询</em>
-                                    </span>
-                                </Link>
                             </p>
                         </div>
                         <p>
-                            <Link to="/StudentMsg/addstuMsg">
-                                <span><img src='/images/edit.png' alt="学生添加" /></span>
-                                <em>学生信息添加</em>
+                            <Link to={{
+                                        "pathname" : "/studentMsg/stusFilter",
+                                        "query" : {}
+                                    }}>
+                                <span className="btn">
+                                    <span><img src='/images/search.png' alt="搜索" /></span>
+                                    <em>查询</em>
+                                </span>
                             </Link>
                         </p>
                     </div>
