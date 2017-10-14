@@ -17,7 +17,7 @@
 >5、后台管理模块包括楼栋管理员的添加与删除等功能
 
 ### 项目架构
-> 整个系统所用的技术框架为react + react-router + es6 + mongoose + node + express + webpack + scss
+> 整个系统所用的技术框架为react + react-router + es6 + mongoose + node + express（koa） + webpack + scss
 
 ### 服务启动
 * 启动`mongodb`
