@@ -26,7 +26,7 @@
 * `npm run dev` 启动前端页面
 
 ```JavaScript
-  在浏览器地址栏输入 http://localhost:8088/ 查看项目
+  在浏览器地址栏输入 http://localhost:8088/ 查看项目效果
 ```
 
 ### 用户权限管理
